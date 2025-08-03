@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import AboutArchitect from "./components/AboutArchitect";
 import ConnectWithUs from "./components/ConnectWithUs";
 import ConstructionUpdates from "./components/ConstructionUpdates";
