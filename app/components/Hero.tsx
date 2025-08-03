@@ -11,7 +11,7 @@ const Hero = () => {
   const { initialVariant, viewVariant, transitionVariant, viewPortVariant } =
     useMotionVariants();
   return (
-    <section className={`w-full lg:h-[375vh] bg-primary relative`}>
+    <section className={`w-full lg:h-[375vh] relative`}>
       <div className="sticky top-0 h-[100vh] w-full z-0">
         <video
           className="object-cover h-full w-full"

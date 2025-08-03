@@ -1,4 +1,3 @@
-
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
 import Aeroplane from "@/components/icons/Aeroplane";
@@ -9,14 +8,14 @@ import { useSignUpStore } from "@/stores/useSignUpStore";
 import { manropeFont } from "@/utils/fonts";
 import React from "react";
 
-
 const RareLiving = () => {
   const { status } = useSignUpStore();
   return (
     <div
+      id="rare-living"
       style={{
-        maskImage: "linear-gradient(to bottom, transparent, black 12%)",
-        WebkitMaskImage: "linear-gradient(to bottom, transparent, black 20%)",
+        maskImage: "linear-gradient(to bottom, transparent, black 5%)",
+        WebkitMaskImage: "linear-gradient(to bottom, transparent, black 2%)",
       }}
       className={`z-10 w-full p-[64px_24px] lg:p-[88px_40px] flex flex-col backdrop-blur-lg lg:absolute -bottom-5`}
     >
@@ -24,18 +23,23 @@ const RareLiving = () => {
         Your Rare Living.
       </div>
 
-      <div className="flex justify-center lg:gap-60 w-full text-primary max-lg:flex-col mx-auto pb-10 mt-[36px]">
+      <div className="flex justify-center items-center lg:gap-40 w-full text-primary max-lg:flex-col mx-auto pb-10 mt-[36px]">
         <p
-          className={`${manropeFont.className} text-[22px] lg:text-[35px] font-[400]`}
+          className={`${manropeFont.className} text-[22px] lg:text-[30px] font-[400] lg:w-[50%]`}
         >
-          Designed for serenity, privacy, and open perspectives.
+          North Wind Estates brings you a rare blend of elegance, comfort, and
+          modern design in the heart of Greater Noida, Pi-I. Our flagship
+          project, Northwind Sanctuary, features premium 3 BHK, 4 BHK, and 4.5
+          BHK luxury apartments crafted for those who choose to Live Rare. With
+          spacious layouts, green-certified architecture, and world-class
+          amenities, every home offers a lifestyle of unmatched serenity and
+          sophistication.
           <br className="max-lg:hidden" />
-          
         </p>
 
-        <div className="max-sm:flex max-sm:flex-col sm:grid sm:grid-rows-2 sm:grid-cols-2 gap-[35px] lg:w-[60%] items-center max-sm:justify-items-center mt-[32px] max-sm:mt-[48px]">
+        <div className="max-custom400:flex max-custom400:flex-col grid grid-rows-2 grid-cols-2 gap-[35px] w-full lg:w-[60%] items-center max-sm:justify-items-center mt-[32px] max-sm:mt-[48px]">
           <div
-            className={`font-boskaMedium text-primary f-c-col text-[35px] rounded-[11.65px] outline-[1.46px] outline-border w-[80%] py-10 lg:py-20 text-center`}
+            className={`font-boskaMedium text-primary f-c-col text-[35px] rounded-[11.65px] outline-[1.46px] outline-border w-[100%] py-10 lg:py-20 text-center`}
           >
             4.5 acres
             <p className={`text-[16px] ${manropeFont.className}`}>
@@ -45,7 +49,7 @@ const RareLiving = () => {
             </p>
           </div>
           <div
-            className={`font-boskaMedium text-primary f-c-col text-[35px] rounded-[11.65px] outline-[1.46px] outline-border w-[80%] py-10 lg:py-20 text-center`}
+            className={`font-boskaMedium text-primary f-c-col text-[35px] rounded-[11.65px] outline-[1.46px] outline-border w-[100%] py-10 lg:py-20 text-center`}
           >
             185
             <p className={`text-[16px] ${manropeFont.className}`}>
@@ -55,7 +59,7 @@ const RareLiving = () => {
             </p>
           </div>
           <div
-            className={`font-boskaMedium text-primary f-c-col text-[35px] rounded-[11.65px] outline-[1.46px] outline-border w-[80%] py-10 lg:py-20 text-center`}
+            className={`font-boskaMedium text-primary f-c-col text-[35px] rounded-[11.65px] outline-[1.46px] outline-border w-[100%] py-10 lg:py-20 text-center`}
           >
             70%
             <p className={`text-[16px] ${manropeFont.className}`}>
@@ -65,7 +69,7 @@ const RareLiving = () => {
             </p>
           </div>
           <div
-            className={`font-boskaMedium text-primary f-c-col text-[35px] rounded-[11.65px] outline-[1.46px] outline-border w-[80%] py-10 lg:py-20 text-center`}
+            className={`font-boskaMedium text-primary f-c-col text-[35px] rounded-[11.65px] outline-[1.46px] outline-border w-[100%] py-10 lg:py-20 text-center`}
           >
             IGBC
             <p className={`text-[16px] ${manropeFont.className}`}>
@@ -149,13 +153,17 @@ const RareLiving = () => {
             text="Download Brochure"
             onTap={() => {
               if (status) {
-                window.open("/assets/certificates/Brochure.pdf", "blank");
-                localStorage.setItem("download-brochure", "yes")
-              }
-              else {
-                document.getElementById("connect-with-us")?.scrollIntoView({behavior:"smooth"})
-                localStorage.setItem("download-brochure", "yes")
-                alert("Please fill the form before downloading brochure!")
+                const link = document.createElement("a");
+                link.href = "/assets/certificates/Brochure.pdf";
+                link.download = "Brochure.pdf";
+                link.click();
+
+                localStorage.setItem("download-brochure", "yes");
+              } else {
+                document
+                  .getElementById("connect-with-us")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                localStorage.setItem("download-brochure", "yes");
               }
             }}
             className={`p-[20px_40px] max-lg:w-[90%] text-[16px] lg:text-[24px] ${manropeFont.className} hover:bg-primary/50 hover:text-secondary duration-200 bg-secondary/70 text-primary`}

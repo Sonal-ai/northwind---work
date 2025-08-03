@@ -41,10 +41,15 @@
   --font-boskaItalicMedium: "Boska-Italic-Medium";
   --breakpoint-custom580: 580px;
   --breakpoint-custom896: 896px;
+  --breakpoint-custom400: 400px;
 }
 
 *::-webkit-scrollbar {
   display: none;
+}
+
+body {
+  background-color: #161203;
 }
 
 

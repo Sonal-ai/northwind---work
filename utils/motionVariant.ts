@@ -11,7 +11,7 @@ export const useMotionVariants = () => {
     once: "true"
   };
   const transitionVariant: Transition = {
-    duration: 0.6,
+    duration: 0.9,
     ease: "easeOut",
   };
   const viewPortVariant: ViewportOptions = { once: true }

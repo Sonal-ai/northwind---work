@@ -14,6 +14,7 @@ import { useMotionVariants } from "@/utils/motionVariant";
 
 import { useState } from "react";
 import FullCertificate from "./FullCertificate";
+import Sticker from "@/components/icons/Sticker";
 
 
 const SustainablyDesigned = () => {
@@ -22,6 +23,9 @@ const SustainablyDesigned = () => {
   const { initialVariant, viewVariant, viewPortVariant, transitionVariant } = useMotionVariants();
   return (
     <div className="w-full bg-secondary relative p-[88px_24px] lg:p-[120px_40px] flex flex-col gap-[36px]">
+      <div className="self-end md:mr-20">
+        <Sticker />
+      </div>
       <div className={`flex flex-col justify-center ${display && "brightness-50"}`}>
         <motion.h1 initial={initialVariant}
           whileInView={viewVariant}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import AboutArchitect from "./components/AboutArchitect";
 import ConnectWithUs from "./components/ConnectWithUs";
 import ConstructionUpdates from "./components/ConstructionUpdates";
@@ -11,17 +11,14 @@ import SustainablyDesigned from "./components/SustainablyDesigned";
 import Footer from "./components/Footer";
 import ImageGallery from "./components/ImageGallery";
 import Disclaimer from "./components/Disclaimer";
+import PreLoader from "./components/PreLoader";
 
 export default function Home() {
   const ref = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    window.scrollBy({
-      top: 500
-    })
-  }, [])
+  const [fullHeight, setFullHeight] = useState<boolean>(false);
   return (
-    <div ref={ref} className={`w-screen h-screen overflow-x-hidden relative`}>
+    <div ref={ref} className={`w-screen ${fullHeight && "h-screen"} overflow-x-hidden relative`}>
+      <PreLoader callback={() => setFullHeight(true)} />
       <NavBar />
       <Hero />
       <ImageGallery />

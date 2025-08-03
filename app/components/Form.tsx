@@ -16,7 +16,7 @@ const Form = () => {
     mobile: "",
     message: "",
     email: "",
-    isSigned: false,
+    isSigned: true,
   });
 
   const handleFormValidation = () => {
@@ -49,10 +49,15 @@ const Form = () => {
     if (responseFromAction) {
       alert("Form submitted successfully!");
 
-      if (localStorage.getItem("download-brochure") === "yes")
-        window.open("/assets/certificates/Brochure.pdf", "blank");
+      if (localStorage.getItem("download-brochure") === "yes") {
+        const link = document.createElement("a");
+        link.href = "/assets/certificates/Brochure.pdf";
+        link.download = "Brochure.pdf";
+        link.click();
+      }
+      document.getElementById("rare-living")?.scrollIntoView({ behavior: "smooth" })
       setStatus();
-      localStorage.setItem("download-brochure", "no")
+      localStorage.setItem("download-brochure", "no");
     }
   };
 

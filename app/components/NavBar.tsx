@@ -9,7 +9,7 @@ const NavBar = () => {
   const [showNavigation, setShowNavigation] = useState<boolean>(false);
   return (
     <div>
-      <div className={`bg-[rgba(194,181,133,0.5)] w-full px-[17px] py-[8px] flex items-center justify-between`}>
+      <div className={`bg-primary/80 z-[99999] w-full px-[17px] py-[8px] flex items-center justify-between`}>
       <div onClick={() => setShowNavigation(true)}>
         <HamBurger />
       </div>
@@ -21,7 +21,7 @@ const NavBar = () => {
 
     <Navigation  show={showNavigation} setShow={setShowNavigation} />
     </div>
-  )                //    <Navigation ref={ref} show={showNavigation} setShow={setShowNavigation} />
+  )          
 }
 
 export default NavBar
