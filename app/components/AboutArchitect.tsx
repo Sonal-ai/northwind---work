@@ -31,7 +31,7 @@ const AboutArchitect = () => {
           viewport={viewPortVariant}
           className={`${manropeFont.className} text-[28px] lg:text-[32px] text-primary mt-[12px]`}
         >
-          Vishal Sharma, Lead Architect
+          Vishal & Vineeta Sharma, Lead Architect
         </motion.p>
         <motion.p
           initial={initialVariant}

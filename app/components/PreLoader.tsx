@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Sign from "@/components/Sign";
+import PreloadSign from "@/components/PreloadSign";
 import { manropeFont } from "@/utils/fonts";
 
 const PreLoader = ({ callback }: { callback: () => void; }) => {
@@ -52,7 +52,7 @@ const PreLoader = ({ callback }: { callback: () => void; }) => {
           transition={{ duration: 0.7, ease: "easeInOut" }}
           className="fixed inset-0 z-[9999] bg-secondary flex flex-col items-center justify-end gap-[420px] py-10 pointer-events-none"
         >
-          <Sign />
+          <PreloadSign />
 
           <div className="flex flex-col items-center cursor-pointer gap-[5px] pointer-events-auto">
             <div className="rounded-full w-7 h-12 border-[2px] border-primary flex justify-center items-center">

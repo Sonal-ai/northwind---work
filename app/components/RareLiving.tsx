@@ -25,7 +25,7 @@ const RareLiving = () => {
 
       <div className="flex justify-center items-center lg:gap-40 w-full text-primary max-lg:flex-col mx-auto pb-10 mt-[36px]">
         <p
-          className={`${manropeFont.className} text-[22px] lg:text-[30px] font-[400] lg:w-[50%]`}
+          className={`${manropeFont.className} text-[22px] brightness-140 lg:text-[30px] font-[400] lg:w-[50%]`}
         >
           North Wind Estates brings you a rare blend of elegance, comfort, and
           modern design in the heart of Greater Noida, Pi-I. Our flagship
@@ -37,7 +37,7 @@ const RareLiving = () => {
           <br className="max-lg:hidden" />
         </p>
 
-        <div className="max-custom400:flex max-custom400:flex-col grid grid-rows-2 grid-cols-2 gap-[35px] w-full lg:w-[60%] items-center max-sm:justify-items-center mt-[32px] max-sm:mt-[48px]">
+        <div className="max-custom400:flex max-custom400:flex-col grid grid-rows-2 grid-cols-2 gap-[35px] w-full brightness-140 lg:w-[60%] items-center max-sm:justify-items-center mt-[32px] max-sm:mt-[48px]">
           <div
             className={`font-boskaMedium text-primary f-c-col text-[35px] rounded-[11.65px] outline-[1.46px] outline-border w-[100%] py-10 lg:py-20 text-center`}
           >
@@ -166,8 +166,9 @@ const RareLiving = () => {
                 localStorage.setItem("download-brochure", "yes");
               }
             }}
-            className={`p-[20px_40px] max-lg:w-[90%] text-[16px] lg:text-[24px] ${manropeFont.className} hover:bg-primary/50 hover:text-secondary duration-200 bg-secondary/70 text-primary`}
-          />
+           className={`p-[20px_40px] max-lg:w-full lg:p-[20px_40px] text-[20px] lg:text-[24px] hover:bg-secondary/80 duration-20 ${
+                       manropeFont.className
+                     }  bg-secondary/90 text-primary`}  />
           <SecondaryButton
             text="View Location"
             onTap={() => {
@@ -179,7 +180,7 @@ const RareLiving = () => {
             className={`p-[20px_40px] max-lg:w-full lg:p-[20px_40px] text-[20px]   hover:bg-amber-200/20 duration-200  lg:text-[24px]  ${
                        manropeFont.className
                      } 
-                         text-secondary
+                        bg-primary text-secondary
                       border-secondary`}
           />
         </div>

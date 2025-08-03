@@ -54,8 +54,8 @@ const ImageGallery = () => {
   }, [current, images.length]);
 
   return (
-    <div className="w-full relative p-[64px_24px] lg:p-[200px_36px] bg-primary flex flex-col gap-[32px]">
-      <div className="flex flex-col justify-center">
+    <div className="w-full relative p-[64px_24px] lg:p-[200px_400px]   bg-primary flex flex-col gap-[32px]">
+      <div className="flex flex-col justify-center pl-[50px]">
         <motion.h1
           initial={initialVariant}
           whileInView={viewVariant}
@@ -68,7 +68,7 @@ const ImageGallery = () => {
         </motion.h1>
       </div>
 
-      <div className="flex items-center gap-[22px] w-full h-[240px] md:h-[300px] lg:h-[600px] overflow-x-hidden">
+      <div className="flex items-center gap-[22px]   w-full h-[240px] md:h-[300px] lg:h-[600px] overflow-x-hidden">
         <div
           onClick={handlePrev}
           className={`rounded-[99px] z-[9999] f-c-row cursor-pointer`}
