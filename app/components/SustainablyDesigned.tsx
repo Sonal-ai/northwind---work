@@ -45,7 +45,11 @@ const SustainablyDesigned = () => {
       </div>
 
 
-      <div className={`grid grid-cols-2 ${display && "brightness-50"} grid-rows-6 md:grid-cols-6 md:grid-rows-2 gap-[20px] md:gap-[36px] py-[24px] md:max-w-[858px] mx-auto justify-items-center place-items-center`}>
+      <motion.div className={`grid grid-cols-2 ${display && "brightness-50"} grid-rows-6 md:grid-cols-6 md:grid-rows-2 gap-[20px] md:gap-[36px] py-[24px] md:max-w-[858px] mx-auto justify-items-center place-items-center`}
+       initial={initialVariant}
+       whileInView={viewVariant}
+       viewport={viewPortVariant}
+       transition={transitionVariant}>
         <div className="py-[20px] lg:py-[36px] f-c-col gap-[12px] outline-2 outline-border rounded-[8px] text-primary md:col-span-2 w-[150px] custom580:w-[184px] md:w-[200px] lg:w-[260px] max-md:row-span-2">
             <SolarPower />
             <p className={`${manropeFont.className} uppercase text-center max-sm:text-[12px]`}>solar power<br />lightning</p>
@@ -78,7 +82,7 @@ const SustainablyDesigned = () => {
             <Tree />
             <p className={`${manropeFont.className} uppercase text-center max-sm:text-[12px]`}>abundant<br />greenery</p>
         </div>
-      </div>
+      </motion.div>
 
       
       

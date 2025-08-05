@@ -13,7 +13,12 @@ const AboutArchitect = () => {
       id="about-architect"
       className="w-full md:h-[100vh] p-[0px_0px] 2xl:p-[0px_200px] relative flex flex-col-reverse lg:flex-row-reverse justify-center bg-secondary"
     >
-      <div className="bg-[url('/assets/architect.png')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-secondary" />
+      <motion.div
+       className="bg-[url('/assets/architect.png')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-secondary" 
+        initial={initialVariant}
+        whileInView={viewVariant}
+        viewport={viewPortVariant}
+        transition={transitionVariant}/>
       <div className="flex flex-col lg:justify-center lg:w-[40%] max-md:bg-secondary p-[64px_24px]">
         <motion.h1
           initial={initialVariant}

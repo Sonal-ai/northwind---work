@@ -5,10 +5,18 @@ import Loc from "@/components/icons/Loc";
 import Mail from "@/components/icons/Mail1";
 import Phone from "@/components/icons/Phone";
 import Globe from "@/components/icons/Globe";
+import { motion } from "framer-motion";
+import { useMotionVariants } from "@/utils/motionVariant";
 
 const Footer = () => {
+  
+  const { initialVariant, viewVariant, viewPortVariant, transitionVariant } = useMotionVariants();
   return (
-    <footer className="w-full flex flex-col bg-tertiary relative p-[50px_50px] md:p-[120px_200px] max-md:h-[1000px] 2xl:p-[40px_400px] gap-[80px] overflow-hidden">
+    <motion.footer className="w-full flex flex-col bg-tertiary relative p-[50px_50px] md:p-[120px_200px] max-md:h-[1000px] 2xl:p-[40px_400px] gap-[80px] overflow-hidden"
+      initial={initialVariant}
+      whileInView={viewVariant}
+      viewport={viewPortVariant}
+      transition={transitionVariant}>
       <div className="h-[134px] flex flex-col justify-center items-center z-20">
         <Sign />
       </div>
@@ -100,7 +108,7 @@ const Footer = () => {
       {/* <div className="hidden">
             <Foot />
         </div> */}
-    </footer>
+    </motion.footer>
   );
 };
 

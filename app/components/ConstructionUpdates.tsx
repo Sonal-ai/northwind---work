@@ -103,7 +103,11 @@ const ConstructionUpdates = () => {
             }}
             className="flex gap-[8px] w-full max-lg:h-[400px] lg:h-[800px] rounded-[15px] transition-transform relative duration-200"
           >
-            <div className="relative size-full rounded-[15px] shrink-0">
+            <motion.div className="relative size-full rounded-[15px] shrink-0"
+             initial={initialVariant}
+             whileInView={viewVariant}
+             viewport={viewPortVariant}
+             transition={transitionVariant}>
               <Image
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction1.jpg"}
@@ -112,7 +116,7 @@ const ConstructionUpdates = () => {
                 alt="building-2"
               />
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
-            </div>
+            </motion.div>
 
             <div className="relative size-full rounded-[15px] shrink-0">
               <Image
