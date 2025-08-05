@@ -54,7 +54,7 @@ const ImageGallery = () => {
   }, [current, images.length]);
 
   return (
-    <div className="w-full relative p-[64px_24px] lg:p-[200px_400px]   bg-primary flex flex-col gap-[32px]">
+    <div className="w-full relative p-[64px_24px] 2xl:p-[100px_400px] bg-primary flex flex-col gap-[0px]">
       <div className="flex flex-col justify-center pl-[50px]">
         <motion.h1
           initial={initialVariant}
@@ -68,7 +68,7 @@ const ImageGallery = () => {
         </motion.h1>
       </div>
 
-      <div className="flex items-center gap-[22px]   w-full h-[240px] md:h-[300px] lg:h-[600px] overflow-x-hidden">
+      <div className="flex items-center gap-[22px] w-full h-[240px] md:h-[300px] lg:h-[600px] overflow-x-hidden rounded-[24px]">
         <div
           onClick={handlePrev}
           className={`rounded-[99px] z-[9999] f-c-row cursor-pointer`}
@@ -82,10 +82,10 @@ const ImageGallery = () => {
             style={{
               transform: `translateX(-${current * 100}%)`,
             }}
-            className={`flex w-full h-full ${
+            className={`flex rounded-[24px] items-center w-full h-full ${
               transitioning
-                ? "transition-transform duration-600 ease-in-out"
-                : ""
+                && "transition-transform duration-600 ease-in-out"
+                
             }`}
           >
             {extendedImages.map((image, index) => (
@@ -94,7 +94,7 @@ const ImageGallery = () => {
                 style={{
                   backgroundImage: `url('${image}')`,
                 }}
-                className="rounded-[24px] z-10 shrink-0 w-full bg-cover bg-center"
+                className="rounded-[24px] h-[400px] z-10 shrink-0 w-full bg-cover bg-center"
               />
             ))}
           </div>

@@ -54,13 +54,13 @@ const MasterfullyPlanned = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(0); // Initialize with first item selected
 
   return (
-    <div className="w-full lg:h-[1194px] bg-primary relative p-[64px_16px] lg:p-[200px_400px]  gap-[44px] flex flex-col">
-      <motion.h1 initial={initialVariant} whileInView={viewVariant} viewport={viewPortVariant} transition={transitionVariant} className={"font-boskaMedium text-[64px] border border-secondary lg:text-[96px] text-secondary"}>
+    <div className="w-full bg-primary relative p-[64px_16px] 2xl:p-[20px_400px] gap-[44px] flex flex-col">
+      <motion.h1 initial={initialVariant} whileInView={viewVariant} viewport={viewPortVariant} transition={transitionVariant} className={"font-boskaMedium ml-[50px] text-[64px] lg:text-[96px] text-secondary"}>
         Masterfully Planned
       </motion.h1>
 
       {/* Map Section */}
-      <div className="outline-2  outline-border rounded-[20px] h-max lg:h-[678px] flex flex-col lg:flex-row items-start w-[90%] xl:w-[70%] self-center">
+      <div className="outline-2 outline-border rounded-[20px] h-max lg:h-[678px] flex flex-col lg:flex-row items-start w-[90%] xl:w-[90%] self-center">
         {/* Names */}
         <div className="flex flex-wrap lg:flex-col lg:items-start lg:w-[40%]">
           {sections.map((section, index) => {

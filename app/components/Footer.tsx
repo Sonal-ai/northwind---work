@@ -8,13 +8,13 @@ import Globe from "@/components/icons/Globe";
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col bg-tertiary relative max-md:p-[120px_0px] max-md:h-[1000px] md:p-[120px_80px] gap-[80px] overflow-hidden">
+    <footer className="w-full flex flex-col bg-tertiary relative p-[50px_50px] md:p-[120px_200px] max-md:h-[1000px] 2xl:p-[40px_400px] gap-[80px] overflow-hidden">
       <div className="h-[134px] flex flex-col justify-center items-center z-20">
         <Sign />
       </div>
   
       <div className="w-full h-full flex flex-row max-sm:flex-col-reverse items-center justify-center gap-[0px] relative z-10">
-        <div className="overflow-hidden w-full h-[700px]">
+        <div className="overflow-hidden w-full h-[500px]">
           <img
             src="/assets/rangoli.png"
             alt="rangoli"
@@ -22,7 +22,7 @@ const Footer = () => {
           />
         </div>
 
-        <div className="flex flex-col w-[500px] items-start text-left text-white gap-[20px] mb-16 max-lg:absolute left-0 top-0 sm:max-lg:right-0 lg:inset-0 px-10 mr-14">
+        <div className="flex flex-col xl:w-[700px] items-start text-left text-white gap-[20px] mb-16 max-lg:absolute left-0 top-0 sm:max-lg:right-0 lg:inset-0">
           <div className="flex flex-col gap-2 items-start">
             <h1
               className={`${manropeFont.className} text-[24px] md:text-[32px] text-white`}
@@ -37,13 +37,13 @@ const Footer = () => {
           </div>
 
           <div
-            className={`${manropeFont.className} flex flex-col gap-[12px] text-[16px] text-white`}
+            className={`${manropeFont.className} flex flex-col gap-[12px] text-[16px] text-white w-full`}
           >
             <div className="flex items-center gap-[8px]">
               <span className="text-[16px]">
                 <Loc />
               </span>
-              <p>Plot 07, Sector Pi-1, Greater Noida,<br />UP-201306</p>
+              <p>Plot 07, Sector Pi-1, Greater Noida, UP-201306</p>
             </div>
             <div className="flex items-center gap-[8px]">
               <span className="text-[16px]">

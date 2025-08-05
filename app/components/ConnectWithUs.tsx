@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const ConnectWithUs = () => {
   const { initialVariant, viewVariant, viewPortVariant, transitionVariant } = useMotionVariants();
   return (
-    <div id="connect-with-us" className="w-full lg:h-[100vh] bg-secondary relative p-[64px_24px] lg:p-[120px_40px] flex flex-col lg:flex-row lg:items-center gap-[36px]">
+    <div id="connect-with-us" className="w-full lg:h-[100vh] bg-secondary relative p-[64px_24px] 2xl:p-[120px_300px] flex flex-col lg:flex-row lg:items-center gap-[36px] lg:gap-[66px]">
       <div className="flex flex-col lg:w-[40%] lg:text-center">
         <motion.h1 initial={initialVariant}
           whileInView={viewVariant}

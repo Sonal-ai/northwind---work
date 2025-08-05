@@ -58,7 +58,7 @@ const ConstructionUpdates = () => {
   const listOfTowers = ["Amaltas", "Banyan", "Cedar"];
   return (
     <div
-      className={`w-full relative p-[64px_24px] bg-secondary lg:p-[100px_40px] flex flex-col gap-[36px] z-[9999] ${
+      className={`w-full relative p-[64px_24px] custom580:p-[64px_80px] bg-secondary lg:p-[100px_100px] 2xl:p-[100px_400px] flex flex-col gap-[36px] z-[9999] ${
         display && "overflow-hidden"
       }`}
     >
@@ -172,7 +172,7 @@ const ConstructionUpdates = () => {
             <div className="flex flex-col relative">
               <div
               onClick={() => setShow(!show)}
-              className={`rounded-full p-3 mt-[24px] max-w-[300px] lg:min-w-[250px] f-c-row gap-3 backdrop-blur-3xl cursor-pointer text-[20px] bg-input ${manropeFont.className} font-[500]`}
+              className={`rounded-full p-3 mt-[24px] max-w-[300px] sm:min-w-[250px] f-c-row gap-3 backdrop-blur-3xl cursor-pointer text-[20px] bg-input ${manropeFont.className} font-[500]`}
             >
               {listOfTowers[current]}
               <LeftArrow
@@ -201,7 +201,7 @@ const ConstructionUpdates = () => {
                     type: "tween",
                     duration: 0.2,
                   }}
-                  className={`bg-input ${manropeFont.className} f-c-col mt-[10px] rounded-2xl max-w-[300px] lg:min-w-[250px] lg:absolute top-20 left-0`}
+                  className={`bg-input ${manropeFont.className} z-[999999] f-c-col mt-[10px] rounded-2xl max-w-[300px] sm:min-w-[250px] md:absolute top-20 left-0`}
                 >
                   <div
                     onClick={() => {

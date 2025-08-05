@@ -22,7 +22,7 @@ const SustainablyDesigned = () => {
   const [display,setDisplay ] = useState<boolean>(false);
   const { initialVariant, viewVariant, viewPortVariant, transitionVariant } = useMotionVariants();
   return (
-    <div className="w-full bg-secondary relative p-[88px_24px] lg:p-[120px_40px] flex flex-col gap-[36px]">
+    <div className="w-full bg-secondary relative p-[88px_24px] 2xl:p-[120px_400px] flex flex-col gap-[36px]">
       <div className="self-end md:mr-20">
         <Sticker />
       </div>

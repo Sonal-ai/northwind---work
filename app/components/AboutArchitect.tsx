@@ -11,7 +11,7 @@ const AboutArchitect = () => {
   return (
     <div
       id="about-architect"
-      className="w-full md:h-[100vh] relative flex flex-col-reverse lg:flex-row-reverse justify-center bg-secondary"
+      className="w-full md:h-[100vh] p-[0px_0px] 2xl:p-[0px_200px] relative flex flex-col-reverse lg:flex-row-reverse justify-center bg-secondary"
     >
       <div className="bg-[url('/assets/architect.png')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-secondary" />
       <div className="flex flex-col lg:justify-center lg:w-[40%] max-md:bg-secondary p-[64px_24px]">
@@ -22,7 +22,7 @@ const AboutArchitect = () => {
           viewport={viewPortVariant}
           className="font-boskaMedium text-primary text-[60px] lg:text-[96px] z-20 leading-none"
         >
-          The Architect
+          The Architects
         </motion.h1>
         <motion.p
           initial={initialVariant}
@@ -31,7 +31,7 @@ const AboutArchitect = () => {
           viewport={viewPortVariant}
           className={`${manropeFont.className} text-[28px] lg:text-[32px] text-primary mt-[12px]`}
         >
-          Vishal & Vineeta Sharma, Lead Architect
+          Vishal & Vineeta Sharma
         </motion.p>
         <motion.p
           initial={initialVariant}
