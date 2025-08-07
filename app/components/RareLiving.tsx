@@ -1,3 +1,4 @@
+"use client";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
 import Aeroplane from "@/components/icons/Aeroplane";
@@ -7,11 +8,18 @@ import Train from "@/components/icons/Train";
 import { useSignUpStore } from "@/stores/useSignUpStore";
 import { manropeFont } from "@/utils/fonts";
 import React from "react";
+import { motion } from "framer-motion";
+import { useMotionVariants } from "@/utils/motionVariant";
 
 const RareLiving = () => {
   const { status } = useSignUpStore();
+  const {initialVariant,viewPortVariant,viewVariant,transitionVariant}= useMotionVariants();
   return (
-    <div
+    <motion.div
+      initial={initialVariant}
+      whileInView={viewVariant}
+      viewport={viewPortVariant}
+      transition={transitionVariant}
       id="rare-living"
       style={{
         maskImage: "linear-gradient(to bottom, transparent, black 5%)",
@@ -185,7 +193,7 @@ const RareLiving = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

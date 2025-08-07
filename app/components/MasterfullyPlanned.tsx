@@ -60,7 +60,12 @@ const MasterfullyPlanned = () => {
       </motion.h1>
 
       {/* Map Section */}
-      <div className="outline-2 outline-border rounded-[20px] h-max lg:h-[678px] flex flex-col lg:flex-row items-start w-[90%] xl:w-[90%] self-center">
+      <motion.div
+       className="outline-2 outline-border rounded-[20px] h-max lg:h-[678px] flex flex-col lg:flex-row items-start w-[90%] xl:w-[90%] self-center"
+       initial={initialVariant}
+       whileInView={viewVariant}
+       viewport={viewPortVariant}
+       transition={transitionVariant}>
         {/* Names */}
         <div className="flex flex-wrap lg:flex-col lg:items-start lg:w-[40%]">
           {sections.map((section, index) => {
@@ -94,7 +99,7 @@ const MasterfullyPlanned = () => {
             className="object-cover lg:rounded-tr-[20px] lg:rounded-br-[20px] max-lg:rounded-b-[20px]"
           />
         </div>
-      </div>
+      </motion.div>
 
       <div className="flex flex-col items-center md:flex-row md:justify-center gap-5 max-lg:mt-[28px] lg:mt-[32px] w-full">
         <PrimaryButton
