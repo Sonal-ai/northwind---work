@@ -2,7 +2,7 @@
 
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
-import { LeftArrow } from "@/components/icons/LeftArrow";
+import { ConstructionArrow} from "@/components/icons/ConstructionArrow";
 import VideoCircle from "@/components/icons/VideoCircle";
 import { AnimatePresence, motion } from "framer-motion";
 import { manropeFont } from "@/utils/fonts";
@@ -92,7 +92,7 @@ const ConstructionUpdates = () => {
           (display || showSiteVideo) && "brightness-50"
         } w-full relative flex justify-center gap-1 items-center`}
       >
-        <LeftArrow
+        <ConstructionArrow
           onClick={handlePrev}
           className="text-primary cursor-pointer absolute left-5 top-1/2 z-[9999]"
         />
@@ -112,7 +112,7 @@ const ConstructionUpdates = () => {
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction1.jpg"}
                 fill
-                className={`rounded-[15px] grayscale-100 cursor-pointer`}
+                className={`rounded-[15px]  cursor-pointer`}
                 alt="building-2"
               />
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
@@ -123,7 +123,7 @@ const ConstructionUpdates = () => {
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction2.jpg"}
                 fill
-                className={`rounded-[15px] grayscale-100 cursor-pointer`}
+                className={`rounded-[15px] cursor-pointer`}
                 alt="building-2"
               />
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
@@ -134,7 +134,7 @@ const ConstructionUpdates = () => {
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction3.jpg"}
                 fill
-                className={`rounded-[15px] grayscale-100 cursor-pointer`}
+                className={`rounded-[15px]  cursor-pointer`}
                 alt="building-2"
               />
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
@@ -146,7 +146,7 @@ const ConstructionUpdates = () => {
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction4.jpg"}
                 fill
-                className={`rounded-[15px] grayscale-100 cursor-pointer`}
+                className={`rounded-[15px]  cursor-pointer`}
                 alt="building-2"
               />
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
@@ -154,7 +154,7 @@ const ConstructionUpdates = () => {
 
           </div>
         </div>
-        <LeftArrow
+        <ConstructionArrow
           onClick={handleNext}
           className="rotate-180 text-primary cursor-pointer absolute right-5 top-1/2 z-[9999]"
         />
@@ -179,7 +179,7 @@ const ConstructionUpdates = () => {
               className={`rounded-full p-3 mt-[24px] max-w-[300px] sm:min-w-[250px] f-c-row gap-3 backdrop-blur-3xl cursor-pointer text-[20px] bg-input ${manropeFont.className} font-[500]`}
             >
               {listOfTowers[current]}
-              <LeftArrow
+              <ConstructionArrow
                 className={`text-primary -rotate-90 mb-1 ${
                   show && "rotate-90 mt-[10px] mb-0"
                 }`}
