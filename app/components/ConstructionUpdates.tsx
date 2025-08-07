@@ -12,6 +12,7 @@ import { useMotionVariants } from "@/utils/motionVariant";
 import { useFullImageStore } from "@/stores/useFullImageStore";
 import FullImage from "./FullImage";
 import WatchSite from "./WatchSite";
+import { LeftArrow } from "@/components/icons/LeftArrow";
 
 const ConstructionUpdates = () => {
   const { setDisplay, display } = useFullImageStore(); //custom hook with store
@@ -179,7 +180,7 @@ const ConstructionUpdates = () => {
               className={`rounded-full p-3 mt-[24px] max-w-[300px] sm:min-w-[250px] f-c-row gap-3 backdrop-blur-3xl cursor-pointer text-[20px] bg-input ${manropeFont.className} font-[500]`}
             >
               {listOfTowers[current]}
-              <ConstructionArrow
+              <LeftArrow
                 className={`text-primary -rotate-90 mb-1 ${
                   show && "rotate-90 mt-[10px] mb-0"
                 }`}
