@@ -2,7 +2,7 @@
 
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
-import { LeftArrow } from "@/components/icons/LeftArrow";
+import { ConstructionArrow} from "@/components/icons/ConstructionArrow";
 import VideoCircle from "@/components/icons/VideoCircle";
 import { AnimatePresence, motion } from "framer-motion";
 import { manropeFont } from "@/utils/fonts";
@@ -12,6 +12,7 @@ import { useMotionVariants } from "@/utils/motionVariant";
 import { useFullImageStore } from "@/stores/useFullImageStore";
 import FullImage from "./FullImage";
 import WatchSite from "./WatchSite";
+import { LeftArrow } from "@/components/icons/LeftArrow";
 
 const ConstructionUpdates = () => {
   const { setDisplay, display } = useFullImageStore(); //custom hook with store
@@ -92,7 +93,7 @@ const ConstructionUpdates = () => {
           (display || showSiteVideo) && "brightness-50"
         } w-full relative flex justify-center gap-1 items-center`}
       >
-        <LeftArrow
+        <ConstructionArrow
           onClick={handlePrev}
           className="text-primary cursor-pointer absolute left-5 top-1/2 z-[9999]"
         />
@@ -112,7 +113,7 @@ const ConstructionUpdates = () => {
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction1.jpg"}
                 fill
-                className={`rounded-[15px] grayscale-100 cursor-pointer`}
+                className={`rounded-[15px]  cursor-pointer`}
                 alt="building-2"
               />
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
@@ -123,7 +124,7 @@ const ConstructionUpdates = () => {
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction2.jpg"}
                 fill
-                className={`rounded-[15px] grayscale-100 cursor-pointer`}
+                className={`rounded-[15px] cursor-pointer`}
                 alt="building-2"
               />
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
@@ -134,7 +135,7 @@ const ConstructionUpdates = () => {
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction3.jpg"}
                 fill
-                className={`rounded-[15px] grayscale-100 cursor-pointer`}
+                className={`rounded-[15px]  cursor-pointer`}
                 alt="building-2"
               />
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
@@ -146,7 +147,7 @@ const ConstructionUpdates = () => {
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction4.jpg"}
                 fill
-                className={`rounded-[15px] grayscale-100 cursor-pointer`}
+                className={`rounded-[15px]  cursor-pointer`}
                 alt="building-2"
               />
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
@@ -154,7 +155,7 @@ const ConstructionUpdates = () => {
 
           </div>
         </div>
-        <LeftArrow
+        <ConstructionArrow
           onClick={handleNext}
           className="rotate-180 text-primary cursor-pointer absolute right-5 top-1/2 z-[9999]"
         />
