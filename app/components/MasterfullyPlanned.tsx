@@ -55,19 +55,19 @@ const MasterfullyPlanned = () => {
 
   return (
     <div className="w-full bg-primary relative p-[64px_36px] 2xl:p-[20px_400px] gap-[44px] flex flex-col">
-      <motion.h1 initial={initialVariant} whileInView={viewVariant} viewport={viewPortVariant} transition={transitionVariant} className={"font-boskaMedium ml-[70px] text-[64px] lg:text-[96px] text-secondary"}>
+      <motion.h1 initial={initialVariant} whileInView={viewVariant} viewport={viewPortVariant} transition={transitionVariant} className={"font-boskaMedium text-[64px] lg:text-[96px] text-secondary"}>
         Masterfully Planned
       </motion.h1>
 
       {/* Map Section */}
       <motion.div
-       className="outline-2 outline-border rounded-[20px] h-max lg:h-[678px] flex flex-col lg:flex-row items-start w-[90%] xl:w-[90%] self-center"
+       className="outline-2 outline-border rounded-[20px] h-max lg:h-[678px] flex flex-col lg:flex-row items-start w-[100%] self-center"
        initial={initialVariant}
        whileInView={viewVariant}
        viewport={viewPortVariant}
        transition={transitionVariant}>
         {/* Names */}
-        <div className="flex flex-wrap lg:flex-col lg:items-start lg:w-[40%]">
+        <div className="flex flex-wrap lg:flex-col lg:items-start lg:w-[40%] xl:w-[50%]">
           {sections.map((section, index) => {
             return (
               <div

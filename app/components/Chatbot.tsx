@@ -23,7 +23,7 @@ type FormProps = {
   flat: "2 BHK" | "3 BHK" | "4 BHK";
 };
 
-const Chatbot = () => {
+const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
   const initialMessage: MessageStateProps = {
     message: `Hi! Welcome to North Wind Estates. Let's help you find
                   your dream home at Northwind Sanctuary. May I have your name,
@@ -187,7 +187,7 @@ const Chatbot = () => {
   const [display, setDisplay] = useState<boolean>(false);
 
   return (
-    <div className="flex flex-col gap-3 fixed custom400:right-10 sm:right-10 bottom-10 z-[1000000]">
+    <div className={`flex flex-col gap-3 fixed max-sm:right-2 right-10 bottom-10 z-[1000000] ${isPreLoaderVisible && "hidden"}`}>
       <AnimatePresence>
         {display && (
           <motion.div

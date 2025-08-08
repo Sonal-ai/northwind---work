@@ -17,9 +17,13 @@ import Chatbot from "./components/Chatbot";
 export default function Home() {
   const ref = useRef<HTMLDivElement | null>(null);
   const [fullHeight, setFullHeight] = useState<boolean>(false);
+  const [isPreLoaderVisible, setIsPreLoaderVisible] = useState<boolean>(true);
   return (
     <div ref={ref} className={`w-screen ${fullHeight && "h-screen"} overflow-x-hidden relative`}>
-      <PreLoader callback={() => setFullHeight(true)} />
+      <PreLoader callback={() => {
+        setFullHeight(true);
+        setIsPreLoaderVisible(false);
+      }} />
       <NavBar />
       <Hero />
       <ImageGallery />
@@ -30,7 +34,7 @@ export default function Home() {
       <AboutArchitect />
       <Disclaimer />
       <Footer />
-      <Chatbot />
+      <Chatbot isPreLoaderVisible={isPreLoaderVisible} />
     </div>
   );
 }

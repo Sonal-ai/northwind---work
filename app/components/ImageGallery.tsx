@@ -54,8 +54,8 @@ const ImageGallery = () => {
   }, [current, images.length]);
 
   return (
-    <div className="w-full relative p-[64px_24px] 2xl:p-[100px_400px] bg-primary flex flex-col gap-[0px]">
-      <div className="flex flex-col justify-center pl-[50px]">
+    <div className="w-full relative p-[64px_24px] 2xl:p-[100px_400px] bg-primary flex flex-col gap-[50px]">
+      <div className="flex flex-col justify-center lg:pl-[0px]">
         <motion.h1
           initial={initialVariant}
           whileInView={viewVariant}
@@ -68,13 +68,13 @@ const ImageGallery = () => {
         </motion.h1>
       </div>
 
-      <div className="flex items-center gap-[22px] w-full h-[240px] md:h-[300px] lg:h-[600px] overflow-x-hidden rounded-[24px]">
+      <div className="flex items-center relative gap-[0px] w-full h-[240px] md:h-[300px] lg:h-[400px] overflow-x-hidden rounded-[24px]">
         <div
           onClick={handlePrev}
-          className={`rounded-[99px] z-[9999] f-c-row cursor-pointer`}
+          className={`rounded-[99px] z-[9999] f-c-row cursor-pointer absolute left-1`}
         >
           <LeftArrow
-            className={`text-[#322907] size-[30px]`}
+            className={`text-primary size-[30px]`}
           />
         </div>
         <div className="overflow-x-hidden rounded-[24px] h-full w-full">
@@ -89,22 +89,24 @@ const ImageGallery = () => {
             }`}
           >
             {extendedImages.map((image, index) => (
-              <div
-                key={index}
+              <div key={index} className={`h-full w-full shrink-0 relative`}>
+                <div
                 style={{
                   backgroundImage: `url('${image}')`,
                 }}
-                className="rounded-[24px] h-[400px] z-10 shrink-0 w-full bg-cover bg-center"
+                className="rounded-[24px] h-full z-10 shrink-0 w-full bg-cover bg-center"
               />
+              <div className="bg-gradient-to-r from-black/50 via-white/5 to-black/50 absolute inset-0 w-full h-full z-[9999]" />
+              </div>
             ))}
           </div>
         </div>
         <div
           onClick={handleNext}
-          className={`rounded-[99px] f-c-row cursor-pointer`}
+          className={`rounded-[99px] f-c-row cursor-pointer absolute right-1`}
         >
           <LeftArrow
-            className={`text-[#322907] size-[30px] rotate-180`}
+            className={`text-primary size-[30px] rotate-180`}
           />
         </div>
       </div>

@@ -54,7 +54,7 @@ const PreLoader = ({ callback }: { callback: () => void; }) => {
         >
           <PreloadSign />
 
-          <div className="flex flex-col items-center cursor-pointer gap-[5px] pointer-events-auto">
+          <div className="flex flex-col items-center cursor-pointer gap-[5px] pointer-events-auto group">
             <div className="rounded-full w-7 h-12 border-[2px] border-primary flex justify-center items-center">
               <motion.div
                 initial={{ y: 0, opacity: 0.7 }}

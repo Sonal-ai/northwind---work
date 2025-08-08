@@ -7,34 +7,74 @@ import SolarPower from "@/components/icons/SolarPower";
 import Tree from "@/components/icons/Tree";
 import Vent from "@/components/icons/Vent";
 import { manropeFont } from "@/utils/fonts";
-import React from "react";
+import React, { ReactElement } from "react";
 import { motion } from "framer-motion";
 import { useMotionVariants } from "@/utils/motionVariant";
-
-
 import { useState } from "react";
 import FullCertificate from "./FullCertificate";
 import Sticker from "@/components/icons/Sticker";
 
+type BoxProps = {
+  icon: ReactElement;
+  text: string;
+  subText: string;
+};
 
 const SustainablyDesigned = () => {
-  
-  const [display,setDisplay ] = useState<boolean>(false);
-  const { initialVariant, viewVariant, viewPortVariant, transitionVariant } = useMotionVariants();
+  const [display, setDisplay] = useState<boolean>(false);
+  const { initialVariant, viewVariant, viewPortVariant, transitionVariant } =
+    useMotionVariants();
+  const boxes: BoxProps[] = [
+    {
+      icon: <SolarPower />,
+      text: "solar power",
+      subText: "lightning",
+    },
+    {
+      icon: <Vent />,
+      text: "low-voc",
+      subText: "paints",
+    },
+    {
+      icon: <Cloud />,
+      text: "rainwater",
+      subText: "harvesting",
+    },
+    {
+      icon: <Recycle />,
+      text: "efficient waste",
+      subText: "management",
+    },
+    {
+      icon: <Bulb />,
+      text: "energy optimized",
+      subText: "layouts",
+    },
+    {
+      icon: <Tree />,
+      text: "abundant",
+      subText: "greenery",
+    },
+  ];
   return (
-    <div className="w-full bg-secondary relative py-[88px] pl-[104px] pr-[24px] 2xl:p-[120px_400px] flex flex-col gap-[36px]">
+    <div className="w-full bg-secondary relative p-[88px_24px] 2xl:p-[120px_400px] flex flex-col gap-[36px]">
       <div className="self-end md:mr-20">
         <Sticker />
       </div>
-      <div className={`flex flex-col justify-center ${display && "brightness-50"}`}>
-        <motion.h1 initial={initialVariant}
+      <div
+        className={`flex flex-col justify-center ${display && "brightness-50"}`}
+      >
+        <motion.h1
+          initial={initialVariant}
           whileInView={viewVariant}
           transition={transitionVariant}
-          viewport={viewPortVariant} className="font-boskaMedium text-primary text-[48px] lg:text-[96px] z-20 leading-none">
+          viewport={viewPortVariant}
+          className="font-boskaMedium text-primary text-[48px] lg:text-[96px] z-20 leading-none"
+        >
           Sustainably Designed.
         </motion.h1>
         <motion.p
-        initial={initialVariant}
+          initial={initialVariant}
           whileInView={viewVariant}
           transition={transitionVariant}
           viewport={viewPortVariant}
@@ -44,51 +84,35 @@ const SustainablyDesigned = () => {
         </motion.p>
       </div>
 
-
-      <motion.div className={`grid grid-cols-2 ${display && "brightness-50"} grid-rows-6 md:grid-cols-6 md:grid-rows-2 gap-[20px] md:gap-[36px] py-[24px] md:max-w-[858px] mx-auto justify-items-center place-items-center`}
-       initial={initialVariant}
-       whileInView={viewVariant}
-       viewport={viewPortVariant}
-       transition={transitionVariant}>
-        <div className="py-[20px] lg:py-[36px] f-c-col gap-[12px] outline-2 outline-border rounded-[8px] text-primary md:col-span-2 w-[150px] custom580:w-[184px] md:w-[200px] lg:w-[260px] max-md:row-span-2">
-            <SolarPower />
-            <p className={`${manropeFont.className} uppercase text-center max-sm:text-[12px]`}>solar power<br />lightning</p>
-        </div>
-
-         <div className="py-[20px] lg:py-[36px] f-c-col gap-[12px] outline-2 outline-border rounded-[8px] text-primary md:col-span-2 w-[150px] custom580:w-[184px] md:w-[200px] lg:w-[260px] max-md:row-span-2 col-span-1">
-            <Vent />
-            <p className={`${manropeFont.className} uppercase text-center max-sm:text-[12px]`}>low-voc<br />paints</p>
-        </div>
-
-
-         <div className="py-[20px] lg:py-[36px] f-c-col gap-[12px] outline-2 outline-border rounded-[8px] text-primary md:col-span-2 w-[150px] custom580:w-[184px] md:w-[200px] lg:w-[260px] max-md:row-span-2">
-            <Cloud />
-            <p className={`${manropeFont.className} uppercase text-center max-sm:text-[12px]`}>rainwater<br />harvesting</p>
-        </div>
-
-
-         <div className="py-[20px] lg:py-[36px] f-c-col gap-[12px] outline-2 outline-border rounded-[8px] text-primary md:col-span-2 w-[150px] custom580:w-[184px] md:w-[200px] lg:w-[260px] max-md:row-span-2 max-md:col-span-1">
-            <Recycle />
-            <p className={`${manropeFont.className} uppercase text-center max-sm:text-[12px]`}>efficient waste<br />management</p>
-        </div>
-
-
-         <div className="py-[20px] lg:py-[36px] f-c-col gap-[12px] outline-2 outline-border rounded-[8px] text-primary md:col-span-2 w-[150px] custom580:w-[184px] md:w-[200px] lg:w-[260px] max-md:row-span-2">
-            <Bulb />
-            <p className={`${manropeFont.className} uppercase text-center max-sm:text-[12px]`}>energy optimized<br /> layouts</p>
-        </div>
-
-        <div className="py-[20px] lg:py-[36px] f-c-col gap-[12px] outline-2 outline-border rounded-[8px] text-primary md:col-span-2 w-[150px] custom580:w-[184px] md:w-[200px] lg:w-[260px] max-md:row-span-2">
-            <Tree />
-            <p className={`${manropeFont.className} uppercase text-center max-sm:text-[12px]`}>abundant<br />greenery</p>
-        </div>
+      <motion.div
+        className={`grid grid-cols-2 ${
+          display && "brightness-50"
+        } w-full grid-rows-6 md:grid-cols-6 gap-[20px] md:gap-[40px]`}
+        initial={initialVariant}
+        whileInView={viewVariant}
+        viewport={viewPortVariant}
+        transition={transitionVariant}
+      >
+        {boxes.map((box, index) => {
+          return (
+            <div
+              key={index}
+              className="py-[20px] lg:py-[36px] f-c-col gap-[12px] outline-2 outline-border rounded-[8px] text-primary md:col-span-2 row-span-3"
+            >
+              {box.icon}
+              <p
+                className={`${manropeFont.className} uppercase text-center max-sm:text-[12px]`}
+              >
+                {box.text}
+                <br />
+                {box.subText}
+              </p>
+            </div>
+          );
+        })}
       </motion.div>
 
-      
-      
-        <FullCertificate display={display} setDisplay={setDisplay}/>
-
-
+      <FullCertificate display={display} setDisplay={setDisplay} />
     </div>
   );
 };

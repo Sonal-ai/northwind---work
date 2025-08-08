@@ -176,7 +176,7 @@ const ConstructionUpdates = () => {
             <div className="flex flex-col relative">
               <div
               onClick={() => setShow(!show)}
-              className={`rounded-full p-3 mt-[24px] max-w-[300px] sm:min-w-[250px] f-c-row gap-3 backdrop-blur-3xl cursor-pointer text-[20px] bg-input ${manropeFont.className} font-[500]`}
+              className={`rounded-full p-3 max-md:mt-[24px] max-w-[300px] sm:min-w-[250px] f-c-row gap-3 backdrop-blur-3xl cursor-pointer text-[20px] bg-input ${manropeFont.className} font-[500]`}
             >
               {listOfTowers[current]}
               <LeftArrow

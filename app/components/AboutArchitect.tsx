@@ -11,7 +11,7 @@ const AboutArchitect = () => {
   return (
     <div
       id="about-architect"
-      className="w-full md:h-[100vh] p-[0px_0px] 2xl:p-[0px_200px] relative flex flex-col-reverse lg:flex-row-reverse justify-center bg-secondary"
+      className="w-full md:h-[100vh] p-[0px_0px] 2xl:p-[0px_200px] relative lg:gap-10 flex flex-col-reverse lg:flex-row-reverse justify-center bg-secondary"
     >
       <motion.div
        className="bg-[url('/assets/architect.png')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-secondary" 
