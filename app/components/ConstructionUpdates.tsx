@@ -95,7 +95,7 @@ const ConstructionUpdates = () => {
       >
         <ConstructionArrow
           onClick={handlePrev}
-          className="text-primary cursor-pointer absolute left-5 top-1/2 z-[9999]"
+          className="text-primary cursor-pointer absolute left-0.5 top-1/2 z-[9999]"
         />
         <div className="w-full overflow-x-hidden flex justify-center rounded-[15px]">
           <div
@@ -157,7 +157,7 @@ const ConstructionUpdates = () => {
         </div>
         <ConstructionArrow
           onClick={handleNext}
-          className="rotate-180 text-primary cursor-pointer absolute right-5 top-1/2 z-[9999]"
+          className="rotate-180 text-primary cursor-pointer absolute right-0.5 top-1/2 z-[9999]"
         />
       </div>
 

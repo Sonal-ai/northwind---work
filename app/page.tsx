@@ -24,7 +24,7 @@ export default function Home() {
         setFullHeight(true);
         setIsPreLoaderVisible(false);
       }} />
-      <NavBar />
+      <NavBar isPreLoaderVisible={isPreLoaderVisible}/>
       <Hero />
       <ImageGallery />
       <MasterfullyPlanned />

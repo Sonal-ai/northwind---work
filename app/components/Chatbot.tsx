@@ -327,13 +327,9 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
       </AnimatePresence>
       <div
         onClick={() => setDisplay(!display)}
-        className="bg-secondary rounded-full f-c-row p-3 text-primary max-w-[50px] self-end cursor-pointer"
+        className="bg-secondary flex items-center justify-center w-[60px] h-[60px] rounded-[12px] mr-[30px] text-primary cursor-pointer"
       >
-        <LeftArrow
-          className={`${
-            display ? "rotate-90" : "-rotate-90"
-          } transition-transform duration-300`}
-        />
+        <Logo width={40} height={40} />
       </div>
     </div>
   );
