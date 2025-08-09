@@ -21,11 +21,11 @@ export default function Home() {
   return (
     <div ref={ref} className={`w-screen ${fullHeight && "h-screen"} overflow-x-hidden relative`}>
       <PreLoader callback={() => {
-        setFullHeight(true);
         setIsPreLoaderVisible(false);
+        setFullHeight(true);
       }} />
       <NavBar isPreLoaderVisible={isPreLoaderVisible}/>
-      <Hero />
+      <Hero isPreLoaderVisible={isPreLoaderVisible} />
       <ImageGallery />
       <MasterfullyPlanned />
       <ConstructionUpdates />

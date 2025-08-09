@@ -327,7 +327,7 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
       </AnimatePresence>
       <div
         onClick={() => setDisplay(!display)}
-        className="bg-secondary flex items-center justify-center w-[60px] h-[60px] rounded-[12px] mr-[30px] text-primary cursor-pointer"
+        className={`bg-secondary flex items-center justify-center self-end w-[60px] h-[60px] rounded-[12px] mr-[30px] text-primary cursor-pointer`}
       >
         <Logo width={40} height={40} />
       </div>

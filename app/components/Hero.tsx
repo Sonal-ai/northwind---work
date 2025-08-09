@@ -7,11 +7,11 @@ import RareLiving from "./RareLiving";
 import { motion } from "framer-motion";
 import { useMotionVariants } from "@/utils/motionVariant";
 
-const Hero = () => {
+const Hero = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
   const { initialVariant, viewVariant, transitionVariant, viewPortVariant } =
     useMotionVariants();
   return (
-    <section className={`w-full lg:h-[375vh] relative`}>
+    <section className={`w-full lg:h-[375vh] relative ${isPreLoaderVisible && "absolute -top-10"}`}>
       <div className="sticky top-0 h-[100vh] w-full z-0">
         <video
           className="object-cover h-full w-full"

@@ -43,7 +43,7 @@ const PreLoader = ({ callback }: { callback: () => void; }) => {
   };
 
   return (
-    <AnimatePresence mode="wait" onExitComplete={handlePreLoaderExit}>
+    <AnimatePresence onExitComplete={handlePreLoaderExit}>
       {visible && (
         <motion.div
           initial={{ opacity: 1 }}
