@@ -13,7 +13,7 @@ import ImageGallery from "./components/ImageGallery";
 import Disclaimer from "./components/Disclaimer";
 import PreLoader from "./components/PreLoader";
 import Chatbot from "./components/Chatbot";
-import TowerComponent from "./components/TowerComponent";
+
 
 export default function Home() {
   const ref = useRef<HTMLDivElement | null>(null);
