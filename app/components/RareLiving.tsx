@@ -181,7 +181,7 @@ const RareLiving = () => {
             text="View Location"
             onTap={() => {
               window.open(
-                "https://www.google.com/maps/dir//Plot+No+-+GH+07,+Unitech+City,+Unitech+Horizon,+Pi+I+%26+II,+Greater+Noida,+Uttar+Pradesh+201310/@28.4805544,77.4641141,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8ce321148fa4e875:0x8fe4480253bf60c2!2m2!1d77.5465155!2d28.4805792?hl=en&authuser=0&entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D",
+                "https://www.google.com/maps/place/28%C2%B028'48.3%22N+77%C2%B032'48.6%22E/@28.4800833,77.5442584,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.4800833!4d77.5468333?entry=ttu&g_ep=EgoyMDI1MDgxMi4wIKXMDSoASAFQAw%3D%3D",
                 "blank"
               );
             }}
