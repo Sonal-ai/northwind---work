@@ -2,7 +2,7 @@
 
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
-import { ConstructionArrow} from "@/components/icons/ConstructionArrow";
+import { ConstructionArrow } from "@/components/icons/ConstructionArrow";
 import VideoCircle from "@/components/icons/VideoCircle";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { manropeFont } from "@/utils/fonts";
@@ -14,25 +14,24 @@ import FullImage from "./FullImage";
 import WatchSite from "./WatchSite";
 import { LeftArrow } from "@/components/icons/LeftArrow";
 
-const ConstructionUpdates = ({ ref }: { ref: RefObject<HTMLDivElement | null> }) => {
-
-
+const ConstructionUpdates = ({
+  ref,
+}: {
+  ref: RefObject<HTMLDivElement | null>;
+}) => {
   const [scale, setScale] = useState(0.2);
   const lastScrollY = useRef(0);
 
   const elementRef = useRef(null);
   const isInView = useInView(elementRef, { amount: 0.1 });
 
-
   useEffect(() => {
-    
     const handleScroll = () => {
       console.log("in image effect", isInView);
-    if (!isInView) return;
+      if (!isInView) return;
 
       const currentScrollY = ref.current?.scrollTop || 0;
       console.log("current scroll y is: ", currentScrollY);
-      
 
       if (currentScrollY > lastScrollY.current) {
         setScale((prev) => Math.min(prev + 0.02, 1));
@@ -46,8 +45,6 @@ const ConstructionUpdates = ({ ref }: { ref: RefObject<HTMLDivElement | null> })
     ref.current?.addEventListener("scroll", handleScroll);
     return () => ref.current?.removeEventListener("scroll", handleScroll);
   }, [isInView]);
-
-
 
   const { setDisplay, display } = useFullImageStore(); //custom hook with store
   const { initialVariant, viewVariant, transitionVariant, viewPortVariant } =
@@ -93,9 +90,12 @@ const ConstructionUpdates = ({ ref }: { ref: RefObject<HTMLDivElement | null> })
   const listOfTowers = ["Amaltas", "Banyan", "Cedar"];
   return (
     <motion.div
-    ref={elementRef} initial={{
-              scale: 0.2
-            }} animate={{ scale }} transition={{ type: "tween", stiffness: 200, damping: 20 }}
+      ref={elementRef}
+      initial={{
+        scale: 0.2,
+      }}
+      animate={{ scale }}
+      transition={{ type: "tween", stiffness: 200, damping: 20 }}
       className={`w-full relative p-[64px_24px] custom580:p-[64px_80px] bg-secondary lg:p-[100px_100px] 2xl:p-[100px_400px] flex flex-col gap-[36px] z-[998] ${
         display && "overflow-hidden"
       }`}
@@ -126,7 +126,6 @@ const ConstructionUpdates = ({ ref }: { ref: RefObject<HTMLDivElement | null> })
       </div>
 
       <motion.div
-      
         className={`${
           (display || showSiteVideo) && "brightness-50"
         } relative flex justify-center gap-1 items-center border border-primary`}
@@ -138,12 +137,11 @@ const ConstructionUpdates = ({ ref }: { ref: RefObject<HTMLDivElement | null> })
         <div className="w-full overflow-x-hidden flex justify-center rounded-[15px]">
           <div
             style={{
-              transform: `translateX(-${(caraouselIndex) * 100}%)`,
+              transform: `translateX(-${caraouselIndex * 100}%)`,
             }}
             className="flex gap-[8px] w-full max-lg:h-[400px] lg:h-[800px] rounded-[15px] transition-transform relative duration-200"
           >
-            <motion.div className="relative size-full rounded-[15px] shrink-0"
-             >
+            <motion.div className="relative size-full rounded-[15px] shrink-0">
               <Image
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction1.jpg"}
@@ -176,7 +174,6 @@ const ConstructionUpdates = ({ ref }: { ref: RefObject<HTMLDivElement | null> })
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
             </div>
 
-
             <div className="relative size-full rounded-[15px] shrink-0">
               <Image
                 onClick={() => setDisplay("/assets/construction1.jpg")}
@@ -187,7 +184,6 @@ const ConstructionUpdates = ({ ref }: { ref: RefObject<HTMLDivElement | null> })
               />
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
             </div>
-
           </div>
         </div>
         <ConstructionArrow
@@ -197,9 +193,7 @@ const ConstructionUpdates = ({ ref }: { ref: RefObject<HTMLDivElement | null> })
       </motion.div>
 
       <div
-        className={`py-[24px] ${
-          (display || showSiteVideo) && "brightness-50"
-        }`}
+        className={`py-[24px] ${(display || showSiteVideo) && "brightness-50"}`}
       >
         <div className="backdrop-blur-[40px] p-[20px_20px] rounded-[12px] border border-input text-primary relative">
           <div className="flex max-md:flex-col lg:items-center w-full justify-between">
@@ -211,68 +205,68 @@ const ConstructionUpdates = ({ ref }: { ref: RefObject<HTMLDivElement | null> })
 
             <div className="flex flex-col relative">
               <div
-              onClick={() => setShow(!show)}
-              className={`rounded-full p-3 max-md:mt-[24px] max-w-[300px] sm:min-w-[250px] f-c-row gap-3 backdrop-blur-3xl cursor-pointer text-[20px] bg-input ${manropeFont.className} font-[500]`}
-            >
-              {listOfTowers[current]}
-              <LeftArrow
-                className={`text-primary -rotate-90 mb-1 ${
-                  show && "rotate-90 mt-[10px] mb-0"
-                }`}
-              />
-            </div>
+                onClick={() => setShow(!show)}
+                className={`rounded-full p-3 max-md:mt-[24px] max-w-[300px] sm:min-w-[250px] f-c-row gap-3 backdrop-blur-3xl cursor-pointer text-[20px] bg-input ${manropeFont.className} font-[500]`}
+              >
+                {listOfTowers[current]}
+                <LeftArrow
+                  className={`text-primary -rotate-90 mb-1 ${
+                    show && "rotate-90 mt-[10px] mb-0"
+                  }`}
+                />
+              </div>
 
-            <AnimatePresence>
-              {show && (
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                    y: -20,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    y: -20,
-                  }}
-                  transition={{
-                    type: "tween",
-                    duration: 0.2,
-                  }}
-                  className={`bg-input ${manropeFont.className} z-[999999] f-c-col mt-[10px] rounded-2xl max-w-[300px] sm:min-w-[250px] md:absolute top-20 left-0`}
-                >
-                  <div
-                    onClick={() => {
-                      setCurrent(0);
-                      setShow(false);
+              <AnimatePresence>
+                {show && (
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                      y: -20,
                     }}
-                    className="hover:bg-input/80 w-full max-md:active:bg-input/50 f-c-row p-2 cursor-pointer rounded-t-2xl"
-                  >
-                    Amaltas
-                  </div>
-                  <div
-                    onClick={() => {
-                      setCurrent(1);
-                      setShow(false);
+                    animate={{
+                      opacity: 1,
+                      y: 0,
                     }}
-                    className="hover:bg-input/80 w-full  max-md:active:bg-input/50 f-c-row p-2 cursor-pointer"
-                  >
-                    Banyan
-                  </div>
-                  <div
-                    onClick={() => {
-                      setCurrent(2);
-                      setShow(false);
+                    exit={{
+                      opacity: 0,
+                      y: -20,
                     }}
-                    className="hover:bg-input/80 w-full  max-md:active:bg-input/50 f-c-row p-2 cursor-pointer rounded-b-2xl"
+                    transition={{
+                      type: "tween",
+                      duration: 0.2,
+                    }}
+                    className={`bg-input ${manropeFont.className} z-[999999] f-c-col mt-[10px] rounded-2xl max-w-[300px] sm:min-w-[250px] md:absolute top-20 left-0`}
                   >
-                    Cedar
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+                    <div
+                      onClick={() => {
+                        setCurrent(0);
+                        setShow(false);
+                      }}
+                      className="hover:bg-input/80 w-full max-md:active:bg-input/50 f-c-row p-2 cursor-pointer rounded-t-2xl"
+                    >
+                      Amaltas
+                    </div>
+                    <div
+                      onClick={() => {
+                        setCurrent(1);
+                        setShow(false);
+                      }}
+                      className="hover:bg-input/80 w-full  max-md:active:bg-input/50 f-c-row p-2 cursor-pointer"
+                    >
+                      Banyan
+                    </div>
+                    <div
+                      onClick={() => {
+                        setCurrent(2);
+                        setShow(false);
+                      }}
+                      className="hover:bg-input/80 w-full  max-md:active:bg-input/50 f-c-row p-2 cursor-pointer rounded-b-2xl"
+                    >
+                      Cedar
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
 

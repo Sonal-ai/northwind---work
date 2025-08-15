@@ -14,6 +14,7 @@ import Disclaimer from "./components/Disclaimer";
 import PreLoader from "./components/PreLoader";
 import Chatbot from "./components/Chatbot";
 
+
 export default function Home() {
   const ref = useRef<HTMLDivElement | null>(null);
   const [fullHeight, setFullHeight] = useState<boolean>(false);
@@ -26,6 +27,7 @@ export default function Home() {
       }} />
       <NavBar isPreLoaderVisible={isPreLoaderVisible}/>
       <Hero isPreLoaderVisible={isPreLoaderVisible} />
+      
       <ImageGallery />
       <MasterfullyPlanned />
       <ConstructionUpdates ref={ref}/>
