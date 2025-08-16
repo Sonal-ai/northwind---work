@@ -63,7 +63,7 @@ const Navigation = ({
           <div className="flex flex-col gap-[12px] lg:gap-[16px] border-primary self-start">
             <div onClick={() => {
                 setShow(false);
-                window.open("/");
+                window.open("/", "auto");
                 localStorage.setItem("purpose", "main")
               }} className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer">
               home
@@ -71,7 +71,7 @@ const Navigation = ({
             <div
               onClick={() => {
                 setShow(false);
-               window.open("/towers")
+               window.open("/towers", "auto")
               }}
               className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer"
             >
@@ -79,7 +79,7 @@ const Navigation = ({
             </div>
             <div
               onClick={() => {
-                window.open("/amenities")
+                window.open("/amenities", "auto")
               }}
               className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer"
             >
@@ -88,7 +88,9 @@ const Navigation = ({
             <div
               onClick={() => {
                 setShow(false);
-                document.getElementById("about-architect")?.scrollIntoView({ behavior: "smooth" })
+                window.open("/", "auto")
+                localStorage.setItem("purpose", "architect");
+                document.getElementById("about-architect")?.scrollIntoView({ behavior: "smooth" });
               }}
               className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer"
             >

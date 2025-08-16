@@ -13,12 +13,15 @@ import ImageGallery from "./components/ImageGallery";
 import Disclaimer from "./components/Disclaimer";
 import PreLoader from "./components/PreLoader";
 import Chatbot from "./components/Chatbot";
+import TowersIcon from "@/components/icons/TowersIcon";
+
 
 export default function Home() {
   const ref = useRef<HTMLDivElement | null>(null);
   const [fullHeight, setFullHeight] = useState<boolean>(false);
   const [isPreLoaderVisible, setIsPreLoaderVisible] = useState<boolean>(true);
    const [purpose, setPurpose] = useState<string | null>(null);
+
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -35,6 +38,17 @@ export default function Home() {
           localStorage.setItem("purpose", "main")
         }, 100);
       }
+       else if (purpose === "architect") {
+        setPurpose("architect");
+        setIsPreLoaderVisible(false);
+        setFullHeight(true);
+
+        setTimeout(() => {
+          document.getElementById("about-architect")?.scrollIntoView({ behavior: "smooth" });
+          localStorage.setItem("purpose", "main")
+        }, 100);
+      
+       }
     }
   }, [purpose]);
 
@@ -62,6 +76,9 @@ export default function Home() {
       <Disclaimer />
       <Footer />
       <Chatbot isPreLoaderVisible={isPreLoaderVisible} />
+      <div className={`fixed bottom-8 right-10 max-sm:right-2 cursor-pointer z-[9999999] ${isPreLoaderVisible && "hidden"}`} onClick={() => {
+        window.open("/towers", "auto")
+      }}><TowersIcon /></div>
     </div>
   );
 }

@@ -12,7 +12,6 @@ import { motion } from "framer-motion";
 import { useMotionVariants } from "@/utils/motionVariant";
 import { useState } from "react";
 import FullCertificate from "./FullCertificate";
-import Sticker from "@/components/icons/Sticker";
 
 type BoxProps = {
   icon: ReactElement;
