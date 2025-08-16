@@ -14,7 +14,6 @@ import Disclaimer from "./components/Disclaimer";
 import PreLoader from "./components/PreLoader";
 import Chatbot from "./components/Chatbot";
 import TowersIcon from "@/components/icons/TowersIcon";
-import { useRouter } from "next/navigation";
 
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
   const [isPreLoaderVisible, setIsPreLoaderVisible] = useState<boolean>(true);
    const [purpose, setPurpose] = useState<string | null>(null);
 
-   const router = useRouter();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
