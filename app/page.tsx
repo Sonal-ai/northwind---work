@@ -22,7 +22,6 @@ export default function Home() {
   const [isPreLoaderVisible, setIsPreLoaderVisible] = useState<boolean>(true);
   const [purpose, setPurpose] = useState<string | null>("main");
 
-  if (!purpose) return null;
 
 
   useEffect(() => {
