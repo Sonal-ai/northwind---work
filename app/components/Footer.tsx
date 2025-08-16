@@ -81,9 +81,7 @@ export const Footer = () => {
           <a href="#" className="hover:text-gray-300 transition-colors">
             PRIVACY POLICY
           </a>
-          <a href="#" className="hover:text-gray-300 transition-colors">
-            DOWNLOAD BROCHURE
-          </a>
+         
           <a href="https://www.facebook.com/people/North-Wind-Estates/61576002300546/" target="_blank" className="hover:text-gray-300 transition-colors">
             FACEBOOK
           </a>

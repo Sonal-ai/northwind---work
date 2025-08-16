@@ -1,9 +1,10 @@
 "use client";
 
-import PrimaryButton from "@/components/buttons/PrimaryButton";
+
 import { manropeFont } from "@/utils/fonts";
 import { useRouter } from "next/navigation";
 import React from "react";
+import SecondaryButton from "@/components/buttons/SecondaryButton";
 
 const AmaltasTower = () => {
   const router = useRouter();
@@ -25,13 +26,13 @@ const AmaltasTower = () => {
         architecture with indulgent living.
       </p>
 
-      <PrimaryButton
+      <SecondaryButton
         text="Express Interest"
         onTap={() => {
           localStorage.setItem("purpose", "form");
           router.push("/");
         }}
-        className="bg-white/20 text-[20px] lg:text-[24px] max-lg:self-center mt-[28px] lg:mt-[56px] px-[41px] py-[21px] border-none"
+        className="bg-secondary text-[20px] lg:text-[24px] max-lg:self-center mt-[28px] lg:mt-[56px] px-[41px] py-[21px] border-none"
       />
     </div>
   );
