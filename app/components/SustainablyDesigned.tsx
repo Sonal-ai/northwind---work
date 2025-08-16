@@ -58,9 +58,7 @@ const SustainablyDesigned = () => {
   ];
   return (
     <div className="w-full bg-secondary relative p-[88px_24px] 2xl:p-[120px_400px] flex flex-col gap-[36px]">
-      <div className="self-end md:mr-20">
-        <Sticker />
-      </div>
+     
       <div
         className={`flex flex-col justify-center ${display && "brightness-50"}`}
       >

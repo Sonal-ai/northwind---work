@@ -101,7 +101,7 @@ const ConstructionUpdates = () => {
       >
         <ConstructionArrow
           onClick={handlePrev}
-          className="text-primary rounded-[12px] cursor-pointer absolute left-0 top-1/2 z-[9999]"
+          className="text-primary  cursor-pointer absolute left-0 top-1/2 z-[9999]"
         />
         <div className="w-full overflow-x-hidden flex justify-center rounded-[15px]">
           <div
