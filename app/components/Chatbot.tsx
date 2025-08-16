@@ -206,7 +206,7 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
 
   return (
     <div
-      className={`flex flex-col gap-3 fixed max-sm:right-2 right-10 bottom-10 z-[1000000] ${
+      className={`flex flex-col gap-3 fixed max-sm:right-14 right-24 bottom-10 z-[1000000] ${
         isPreLoaderVisible && "hidden"
       }`}
     >
