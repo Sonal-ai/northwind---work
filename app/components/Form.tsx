@@ -36,7 +36,6 @@ const Form = () => {
   };
 
   const handleFormSubmission = async () => {
-    console.log("in handler");
 
     const isFormValidated = handleFormValidation();
     if (!isFormValidated) {
@@ -44,7 +43,6 @@ const Form = () => {
       return;
     }
     const responseFromAction = await submitForm(formData);
-    console.log(responseFromAction);
 
     if (responseFromAction) {
       alert("Form submitted successfully!");

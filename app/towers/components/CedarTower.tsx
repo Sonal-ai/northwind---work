@@ -3,9 +3,10 @@
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import { manropeFont } from "@/utils/fonts";
 import React from "react";
-import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const CedarTower = () => {
+  const router = useRouter();
   return (
     <div
       
@@ -26,7 +27,10 @@ const CedarTower = () => {
 
       <PrimaryButton
         text="Express Interest"
-        onTap={() => window.open("/")}
+        onTap={() => {
+          localStorage.setItem("purpose", "form");
+          router.push("/");
+        }}
         className="bg-white/20 text-[20px] lg:text-[24px] max-lg:self-center mt-[28px] lg:mt-[56px] px-[41px] py-[21px] border-none"
       />
     </div>

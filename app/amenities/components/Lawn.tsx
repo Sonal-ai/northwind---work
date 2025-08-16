@@ -14,7 +14,7 @@ const Lawn=() =>{
                     whileInView={viewVariant}
                     transition={transitionVariant}
                     viewport={viewPortVariant}
-                    className="font-boskaMedium text-secondary text-[60px] lg:text-[96px] z-20 leading-none"
+                    className="font-boskaMedium text-secondary text-[60px] lg:text-[96px] z-20 leading-none text-start"
                    
                     >
                     Exclusive Banquet Hall & Signature <br/>
@@ -33,7 +33,7 @@ const Lawn=() =>{
                     transition={transitionVariant}/>
             </div>        
                     
-            <div className="flex flex-col items-center lg:justify-center   w-full ">
+            <div className="flex flex-col items-center lg:justify-center  w-full ">
                 <motion.h2
                     initial={initialVariant}
                     whileInView={viewVariant}
@@ -50,12 +50,7 @@ const Lawn=() =>{
                     transition={transitionVariant}
                     viewport={viewPortVariant}
                     className={`mt-[48px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
-                    style={{ 
-                        textAlign: 'justify',
-                        textAlignLast: 'justify',
-                        maxWidth: 'fit-content',
-                        hyphens: 'none'
-                    }}
+                    
                     >
                     Breathe freely in the beautifully manicured open lawns at the heart of the community.
                 </motion.p>

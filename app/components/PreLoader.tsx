@@ -5,23 +5,24 @@ import { motion, AnimatePresence } from "framer-motion";
 import PreloadSign from "@/components/PreloadSign";
 import { manropeFont } from "@/utils/fonts";
 
-const PreLoader = ({ callback }: { callback: () => void; }) => {
-  const [visible, setVisible] = useState(true);
+const PreLoader = ({ callback, initial }: { callback: () => void; initial: boolean; }) => {
+  const [visible, setVisible] = useState(initial);
 
   useEffect(() => {
-    console.log("in effect");
+    setVisible(initial);
+  }, [initial])
+
+  useEffect(() => {
 
     document.body.style.overflow = "hidden";
 
     const handleWheel = (e: Event) => {
-      console.log("wheel detected");
       e.preventDefault();
       setVisible(false);
       window.removeEventListener("wheel", handleWheel);
     };
 
     const handleTouchStart = () => {
-      console.log("touch detected");
       setVisible(false);
       window.removeEventListener("touchstart", handleTouchStart);
     };

@@ -27,11 +27,9 @@ const ConstructionUpdates = ({
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log("in image effect", isInView);
       if (!isInView) return;
 
       const currentScrollY = ref.current?.scrollTop || 0;
-      console.log("current scroll y is: ", currentScrollY);
 
       if (currentScrollY > lastScrollY.current) {
         setScale((prev) => Math.min(prev + 0.02, 1));
@@ -89,7 +87,8 @@ const ConstructionUpdates = ({
 
   const listOfTowers = ["Amaltas", "Banyan", "Cedar"];
   return (
-    <motion.div
+    <div className="w-full bg-secondary">
+      <motion.div
       ref={elementRef}
       initial={{
         scale: 0.2,
@@ -128,7 +127,7 @@ const ConstructionUpdates = ({
       <motion.div
         className={`${
           (display || showSiteVideo) && "brightness-50"
-        } relative flex justify-center gap-1 items-center border border-primary`}
+        } relative flex justify-center gap-1 items-center`}
       >
         <ConstructionArrow
           onClick={handlePrev}
@@ -308,6 +307,7 @@ const ConstructionUpdates = ({
       <FullImage />
       <WatchSite display={showSiteVideo} setDisplay={setShowSiteVideo} />
     </motion.div>
+    </div>
   );
 };
 

@@ -11,9 +11,23 @@ const Navigation = ({
   show: boolean;
   setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
+
   useEffect(() => {
     setShow(show);
   }, [show]);
+
+  useEffect(() => {
+    if (show) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [show]);
+
   return (
     <AnimatePresence>
       {show && (
@@ -34,10 +48,12 @@ const Navigation = ({
             duration: 0.3,
             type: "tween",
           }}
-          className={`absolute z-[9999] flex flex-col justify-between pl-3 lg:pl-20 pr-5 py-4 inset-0 bg-[url("/assets/nav-logo.svg")] w-full h-full bg-secondary bg-right-top bg-no-repeat`}
+          className={`fixed z-[999] max-h-screen flex flex-col justify-between pl-3 lg:pl-20 pr-5 py-4 inset-0 bg-[url("/assets/nav-logo.svg")] w-full bg-secondary bg-right-top bg-no-repeat`}
         >
           <div
-            onClick={() => setShow(false)}
+            onClick={() => {
+              setShow(false);
+            }}
             className="self-start lg:self-end p-2 rounded-xl cursor-pointer"
           >
             <Cross />
@@ -47,9 +63,27 @@ const Navigation = ({
           <div className="flex flex-col gap-[12px] lg:gap-[16px] border-primary self-start">
             <div onClick={() => {
                 setShow(false);
-               
+                window.open("/");
+                localStorage.setItem("purpose", "main")
               }} className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer">
               home
+            </div>
+            <div
+              onClick={() => {
+                setShow(false);
+               window.open("/towers")
+              }}
+              className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer"
+            >
+              towers
+            </div>
+            <div
+              onClick={() => {
+                window.open("/amenities")
+              }}
+              className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer"
+            >
+              amenities
             </div>
             <div
               onClick={() => {

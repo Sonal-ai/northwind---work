@@ -17,6 +17,7 @@ import AmaltasTower from "./components/AmaltasTower";
 import BanyanTower from "./components/BanyanTower";
 import CedarTower from "./components/CedarTower";
 import useIsMobile from "@/hooks/useIsMobile";
+import NavBar from "../components/NavBar";
 
 const Towers = () => {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -27,6 +28,7 @@ const Towers = () => {
   const [canvasSize, setCanvasSize] = useState({ width: 1920, height: 1080 });
   const [images, setImages] = useState<HTMLImageElement[]>([]);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+
 
   const components = [
     <AmaltasTower key="amaltas" />,
@@ -80,7 +82,6 @@ const Towers = () => {
           const img = new Image();
           img.onload = () => resolve();
           img.onerror = () => reject();
-          console.log(isMobile);
           
           img.src = isMobile ? `/assets/videos/towers/mobile/${i}.webp` : `/assets/videos/towers/${i}.webp`;
           loadedImages.push(img);
@@ -145,7 +146,6 @@ const Towers = () => {
     if (!imagesLoaded) return;
 
     const frameIndex = Math.round(Number(latest));
-    console.log("Frame index:", frameIndex, "Latest:", latest);
     render(frameIndex);
 
     if (frameIndex >= 50 && frameIndex < 130) {
@@ -170,15 +170,15 @@ const Towers = () => {
   // ye bas dekhne ke lie h console me scroll ke hissab se kon sa frame live hai abhi.
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
-      console.log("Scroll progress:", latest);
     });
     return unsubscribe;
   }, [scrollYProgress]);
   return (
     <div
       ref={scrollContainerRef}
-      className="w-screen h-[500vh] bg-secondary relative"
+      className={`w-screen h-[500vh] relative`}
     >
+      <NavBar />
       <div
         ref={containerRef}
         className="w-screen h-screen bg-secondary sticky top-0"

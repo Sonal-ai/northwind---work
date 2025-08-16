@@ -45,7 +45,7 @@ export default function All() {
   ];
 
   return (
-    <div className="bg-secondary h-full relative text-primary py-16 px-6 lg:px-24  mt-[400px]">
+    <div className="bg-secondary w-full text-primary py-16 px-6 lg:px-24">
      
       <h1 className="text-[56px] lg:text-[72px] font-boskaMedium text-primary mb-12">
         All Amenities
