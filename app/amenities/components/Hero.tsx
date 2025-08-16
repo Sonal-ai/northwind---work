@@ -14,22 +14,25 @@ const Hero = () => {
     useMotionVariants();
     const router = useRouter()
   return (
-    <section className={`w-full  relative bg-primary`}>
-      <div className="w-full h-[100vh] relative overflow-hidden ">
+    <section className="w-full relative bg-primary">
+      <div className="w-full h-[100vh] relative overflow-hidden border-4 flex items-end border-amber-700">
         <div
-          className="bg-cover absolute inset-0 bg-center bg no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url('assets/reception.png')` }}
         ></div>
-        <div className="absolute bottom-8 right-8 z-200">
-          <h1 className="font-boskaMedium text-[96px] text-white tracking-wide">
+
+        {/* Overlay with full height to help position content exactly */}
+        <div className="absolute mt-auto inset-0 flex items-end justify-end px-8 ">
+          <h1 className="font-boskaMedium text-[128px] text-bg-primary border border-white tracking-wide leading-none">
             Amenities
           </h1>
         </div>
+ 
       </div>
 
       <div className="flex flex-col w-full  justify-center items-center py-[96px] h-[204px] gap-8">
         <p
-          className={`${manropeFont.className}  text-black uppercase px-4 text-[20px] lg:text-[24px]`}
+          className={`${manropeFont.className}  text-black  px-4 text-[20px] lg:text-[24px]`}
         >
           Discover a curated collection of indoor and outdoor amenities,
           designed to
@@ -76,14 +79,14 @@ const Hero = () => {
           viewport={viewPortVariant}
           transition={transitionVariant}
           className={
-            "font-boskaMedium text-[64px] lg:text-[96px] text-secondary"
+            "font-boskaMedium text-[64px] text-center lg:text-[96px] text-secondary"
           }
         >
           World-Class Amenities
           <br />
           For An Inspired Lifestyles
         </motion.h1>
-        <div className=" p-[64px_36px] relative h-[300px] sm:max-lg:h-[600px] rounded-[20px] lg:h-full w-full overflow-hidden ">
+        <div className=" p-[64px_36px] relative h-[300px] sm:max-lg:h-[600px]  lg:h-full w-full overflow-hidden ">
           <div
             className="bg-cover absolute inset-0 bg-center bg no-repeat"
             style={{ backgroundImage: `url('assets/world.jpg')` }}

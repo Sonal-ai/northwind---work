@@ -31,30 +31,34 @@ const Lawn=() =>{
                     whileInView={viewVariant}
                     viewport={viewPortVariant}
                     transition={transitionVariant}/>
-            </div>        
-                    
-            <div className="flex flex-col items-center lg:justify-center  w-full ">
-                <motion.h2
+
+                    <motion.h2
                     initial={initialVariant}
                     whileInView={viewVariant}
                     transition={transitionVariant}
                     viewport={viewPortVariant}
-                    className="font-boskaMedium text-secondary text-[60px] lg:text-[96px] z-20 leading-none"
-                    
+                    className="font-boskaMedium text-secondary text-[60px] lg:text-[96px] z-20 leading-none text-start"
+                   
                     >
-                    Expansive Open Lawn        
-                </motion.h2>
-                <motion.p
+                    Expansive Open Lawn
+                     <br/>
+                   
+                   </motion.h2> 
+
+                   <motion.p
                     initial={initialVariant}
                     whileInView={viewVariant}
                     transition={transitionVariant}
                     viewport={viewPortVariant}
-                    className={`mt-[48px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
+                    className={`mt-[10px] ${manropeFont.className} text-start  text-[20px] lg:text-[24px] text-secondary font-[500]`}
                     
                     >
                     Breathe freely in the beautifully manicured open lawns at the heart of the community.
-                </motion.p>
-            </div>
+                 </motion.p>
+
+            </div>        
+                    
+           
                  
                 
            

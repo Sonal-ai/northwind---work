@@ -18,7 +18,7 @@ const WorldClass = () => {
           viewport={viewPortVariant}
           transition={transitionVariant}
         />
-        <div className="flex flex-col lg:justify-center lg:w-[40%] max-md:bg-primary p-[64px_24px] lg:gap-[40px]">
+        <div className="flex flex-col lg:justify-center lg:w-[40%] max-md:bg-primary p-[64px_24px] lg:gap-px]">
           <motion.h1
             initial={initialVariant}
             whileInView={viewVariant}
