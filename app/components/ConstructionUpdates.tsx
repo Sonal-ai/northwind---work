@@ -4,45 +4,20 @@ import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
 import { ConstructionArrow } from "@/components/icons/ConstructionArrow";
 import VideoCircle from "@/components/icons/VideoCircle";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { manropeFont } from "@/utils/fonts";
 import Image from "next/image";
-import React, { RefObject, useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { useMotionVariants } from "@/utils/motionVariant";
 import { useFullImageStore } from "@/stores/useFullImageStore";
 import FullImage from "./FullImage";
 import WatchSite from "./WatchSite";
 import { LeftArrow } from "@/components/icons/LeftArrow";
 
-const ConstructionUpdates = ({
-  ref,
-}: {
-  ref: RefObject<HTMLDivElement | null>;
-}) => {
-  const [scale, setScale] = useState(0.2);
-  const lastScrollY = useRef(0);
+const ConstructionUpdates = () => {
 
-  const elementRef = useRef(null);
-  const isInView = useInView(elementRef, { amount: 0.1 });
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!isInView) return;
-
-      const currentScrollY = ref.current?.scrollTop || 0;
-
-      if (currentScrollY > lastScrollY.current) {
-        setScale((prev) => Math.min(prev + 0.02, 1));
-      } else {
-        setScale((prev) => Math.max(prev - 0.02, 0.5));
-      }
-
-      lastScrollY.current = currentScrollY;
-    };
-
-    ref.current?.addEventListener("scroll", handleScroll);
-    return () => ref.current?.removeEventListener("scroll", handleScroll);
-  }, [isInView]);
+ 
 
   const { setDisplay, display } = useFullImageStore(); //custom hook with store
   const { initialVariant, viewVariant, transitionVariant, viewPortVariant } =
