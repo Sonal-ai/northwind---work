@@ -194,15 +194,43 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
 
   const [display, setDisplay] = useState<boolean>(false);
 
-
   // Scroll to bottom always:
   const ref = useRef<HTMLDivElement | null>(null);
 
+  const submitRef = useRef<HTMLDivElement | null>(null);
+
+
+
+  // Enter key form submission
+
   useEffect(() => {
-    if (ref.current){
+    const handleEnterFunctionality = (e: KeyboardEvent) => {
+      if (display && e.key === "Enter") {
+        submitRef.current?.click();
+      }
+    };
+
+    document.body.addEventListener("keypress", handleEnterFunctionality);
+  }, [display]);
+
+  useEffect(() => {
+    if (ref.current) {
       ref.current.scrollTop = ref.current.scrollHeight;
     }
-  }, [messages])
+  }, [messages]);
+
+
+  const botRef = useRef<HTMLDivElement | null>(null);
+
+
+  useEffect(() => {
+    document.body.addEventListener("click", (e: MouseEvent) => {
+      if (!botRef.current?.contains(e.target as Node)) {
+        setDisplay(false);
+        return;
+      }
+    })
+  }, [])
 
   return (
     <div
@@ -217,6 +245,7 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
               opacity: 0,
               y: 30,
             }}
+            ref={botRef}
             animate={{
               opacity: 1,
               y: 0,
@@ -255,7 +284,7 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
 
             {/* Messages */}
             <div
-            ref={ref}
+              ref={ref}
               className={`overflow-x-hidden overflow-y-scroll flex flex-col gap-3 px-3 py-2 ${manropeFont.className}`}
             >
               {/* Conversation */}
@@ -334,6 +363,7 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
                   placeholder={placeholder}
                 />
                 <div
+                  ref={submitRef}
                   onClick={() => {
                     if (userMessage.length > 0) {
                       addMessage({
@@ -344,8 +374,7 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
                       setUserMessage("");
                       return;
                     }
-                    alert("Empty values not allowed!")
-
+                    alert("Empty values not allowed!");
                   }}
                   className="rounded-full px-4 py-3 bg-secondary text-primary rotate-180 cursor-pointer"
                 >

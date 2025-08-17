@@ -27,9 +27,9 @@ export default function Home() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const savedPurpose = localStorage.getItem("purpose");
-
+      setPurpose(savedPurpose);
       if (savedPurpose === "form") {
-        setPurpose("form");
+
         setIsPreLoaderVisible(false);
         setFullHeight(true);
 
@@ -39,7 +39,9 @@ export default function Home() {
         }, 100);
       }
        else if (purpose === "architect") {
-        setPurpose("architect");
+        
+        console.log("via architect");
+        
         setIsPreLoaderVisible(false);
         setFullHeight(true);
 

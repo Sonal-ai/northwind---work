@@ -13,7 +13,8 @@ import { useMotionVariants } from "@/utils/motionVariant";
 
 const RareLiving = () => {
   const { status } = useSignUpStore();
-  const {initialVariant,viewPortVariant,viewVariant,transitionVariant}= useMotionVariants();
+  const { initialVariant, viewPortVariant, viewVariant, transitionVariant } =
+    useMotionVariants();
   return (
     <motion.div
       initial={initialVariant}
@@ -25,7 +26,7 @@ const RareLiving = () => {
         maskImage: "linear-gradient(to bottom, transparent, black 5%)",
         WebkitMaskImage: "linear-gradient(to bottom, transparent, black 2%)",
       }}
-      className={`z-10 w-full p-[64px_24px] lg:p-[88px_40px] flex flex-col backdrop-blur-lg lg:absolute -bottom-5`}
+      className={`z-10 w-full p-[64px_36px] lg:p-[88px_40px] flex flex-col backdrop-blur-lg lg:absolute -bottom-5`}
     >
       <div className="font-boskaMedium  selection:bg-primary selection:text-secondary text-primary text-[68px] lg:text-[128px] leading-[130%] xl:text-[180px] ">
         Your Rare Living.
@@ -174,9 +175,8 @@ const RareLiving = () => {
                 localStorage.setItem("download-brochure", "yes");
               }
             }}
-           className={`p-[20px_40px] max-lg:w-full lg:p-[20px_40px] text-[20px] lg:text-[24px] hover:bg-secondary/80 duration-20 ${
-                       manropeFont.className
-                     }  bg-secondary/90 text-primary`}  />
+            className={`p-[20px_40px] max-lg:w-full lg:p-[20px_40px] text-[20px] lg:text-[24px] hover:bg-secondary/80 duration-20 ${manropeFont.className}  bg-secondary/90 text-primary`}
+          />
           <SecondaryButton
             text="View Location"
             onTap={() => {
@@ -185,11 +185,9 @@ const RareLiving = () => {
                 "blank"
               );
             }}
-            className={`p-[20px_40px] max-lg:w-full lg:p-[20px_40px] text-[20px]   hover:bg-amber-200/20 duration-200  lg:text-[24px]  ${
-                       manropeFont.className
-                     } 
-                        bg-primary text-secondary
-                      border-secondary`}
+            className={`p-[20px_40px] max-lg:w-full lg:p-[20px_40px] text-[20px]   hover:bg-amber-200/20 duration-200  lg:text-[24px]  ${manropeFont.className} 
+                         bg-primary text-secondary
+                       border-secondary`}
           />
         </div>
       </div>

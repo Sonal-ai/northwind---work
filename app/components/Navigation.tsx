@@ -88,9 +88,8 @@ const Navigation = ({
             <div
               onClick={() => {
                 setShow(false);
-                window.open("/", "_self")
                 localStorage.setItem("purpose", "architect");
-                document.getElementById("about-architect")?.scrollIntoView({ behavior: "smooth" });
+                window.open("/", "_self")
               }}
               className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer"
             >

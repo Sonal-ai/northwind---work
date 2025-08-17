@@ -41,7 +41,7 @@ const Hero = () => {
         </p>
       </div>
 
-      <div className="flex-col flex sm:flex-row-reverse justify-center items-center gap-5 mt-[36px] w-full">
+      <div className="flex-col max-sm:p-[64px_24px] flex sm:flex-row-reverse justify-center items-center gap-5 mt-[36px] w-full">
         <PrimaryButton
           text="Download Brochure"
           onTap={() => {
