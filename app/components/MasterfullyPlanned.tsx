@@ -66,7 +66,7 @@ const MasterfullyPlanned = () => {
         whileInView={viewVariant}
         viewport={viewPortVariant}
         transition={transitionVariant}
-        className={"font-boskaMedium text-[64px] lg:text-[96px] text-secondary"}
+        className={"font-boskaMedium text-[48px] lg:text-[96px] text-secondary"}
       >
         Masterfully Planned
       </motion.h1>

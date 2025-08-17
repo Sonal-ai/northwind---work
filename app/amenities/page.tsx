@@ -16,7 +16,7 @@ import TowersIcon from "@/components/icons/TowersIcon";
 export default function page() {
   return (
     <div
-      className={`w-screen overflow-x-hidden text-primary relative bg-primary flex flex-col`}
+      className={`w-screen overflow-x-hidden text-primary relative bg-primary flex flex-col justify-start gap-0`}
     >
       <NavBar />
       <Hero />

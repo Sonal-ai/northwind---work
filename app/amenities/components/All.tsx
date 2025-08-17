@@ -46,7 +46,7 @@ export default function All() {
   ];
 
   return (
-    <div className="bg-secondary w-full text-primary py-16 px-6 lg:px-24 flex justify-center items-center min-h-screen">
+    <div className="bg-secondary w-full mt-[32px] text-primary py-16 px-6 lg:px-24 flex justify-center items-center min-h-screen">
       <div className="max-w-6xl w-full text-left">
         <h1 className="text-[56px] lg:text-[72px] font-boskaMedium text-primary mb-12">
           All Amenities

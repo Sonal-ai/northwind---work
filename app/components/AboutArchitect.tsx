@@ -22,7 +22,7 @@ const AboutArchitect = () => {
           whileInView={viewVariant}
           transition={transitionVariant}
           viewport={viewPortVariant}
-          className="font-boskaMedium text-primary text-[60px] lg:text-[96px] z-20 leading-none"
+          className="font-boskaMedium text-primary text-[48px] lg:text-[96px] z-20 leading-none"
         >
           The Architects
         </motion.h1>

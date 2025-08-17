@@ -48,7 +48,7 @@ const Navigation = ({
             duration: 0.3,
             type: "tween",
           }}
-          className={`fixed z-[999] max-h-screen flex flex-col justify-between pl-3 lg:pl-20 pr-5 py-4 inset-0 bg-[url("/assets/nav-logo.svg")] w-full bg-secondary bg-right-top bg-no-repeat`}
+          className={`fixed z-[99999999] max-h-screen flex flex-col justify-between pl-3 lg:pl-20 pr-5 py-4 inset-0 bg-[url("/assets/nav-logo.svg")] w-full bg-secondary bg-right-top bg-no-repeat`}
         >
           <div
             onClick={() => {

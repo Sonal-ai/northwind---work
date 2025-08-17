@@ -9,25 +9,24 @@ const WorldClass = () => {
     useMotionVariants();
 
   return (
-    <div className="w-full h-[150vh] bg-primary relative gap-[20px] flex flex-col -mt-16 md:mt-0">
-      <div className="w-full md:h-[100vh] p-[0px_0px] 2xl:p-[0px_200px] relative lg:gap-[40px] flex flex-col-reverse lg:flex-row justify-center bg-primary">
+    <div className="w-full bg-primary relative flex flex-col md:mt-0 mt-[32px]">
+      <div className="w-full md:h-[80vh] 2xl:p-[0px_200px] relative lg:gap-[32px] flex flex-col-reverse lg:flex-row justify-center bg-primary">
         <motion.div
-          className="bg-[url('/assets/avRoom.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary"
+          className="bg-[url('/assets/avRoom.jpg')] w-full lg:w-1/2 md:h-full min-h-[306px] bg-cover lg:bg-contain max-lg:mt-[20px] bg-no-repeat bg-center lg:bg-right bg-primary"
           initial={initialVariant}
           whileInView={viewVariant}
           viewport={viewPortVariant}
           transition={transitionVariant}
         />
-        <div className="flex flex-col lg:justify-center lg:w-[40%] max-md:bg-primary p-[64px_24px]">
+        <div className="flex flex-col lg:justify-center lg:w-[40%] max-md:bg-primary px-[16px]">
           <motion.h1
             initial={initialVariant}
             whileInView={viewVariant}
             transition={transitionVariant}
             viewport={viewPortVariant}
-            className="font-boskaMedium text-secondary text-[60px] lg:text-[96px] z-20 leading-none"
+            className="font-boskaMedium text-secondary text-[48px] lg:text-[96px] z-20 leading-none"
           >
-            Private AV
-            <br />
+            Private AV 
             Room
           </motion.h1>
 
@@ -36,7 +35,7 @@ const WorldClass = () => {
             whileInView={viewVariant}
             transition={transitionVariant}
             viewport={viewPortVariant}
-            className={`mt-[48px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
+            className={`mt-[16px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[400]`}
           >
             Immerse yourself in cinematic
             <br />
@@ -46,21 +45,21 @@ const WorldClass = () => {
         </div>
       </div>
 
-      <div className="w-full md:h-[100vh] p-[0px_0px] 2xl:p-[0px_200px] relative lg:gap-10 flex flex-col-reverse lg:flex-row-reverse justify-center bg-primary">
+      <div className="w-full md:h-[80vh] mt-[32px] p-[0px_0px] 2xl:p-[0px_200px] relative lg:gap-10 flex flex-col-reverse lg:flex-row-reverse justify-center bg-primary">
         <motion.div
-          className="bg-[url('/assets/arcade.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary"
+          className="bg-[url('/assets/arcade.jpg')] w-full lg:w-1/2 md:h-full min-h-[306px] bg-cover lg:bg-contain max-lg:mt-[20px] bg-no-repeat bg-center lg:bg-right bg-primary"
           initial={initialVariant}
           whileInView={viewVariant}
           viewport={viewPortVariant}
           transition={transitionVariant}
         />
-        <div className="flex flex-col lg:justify-center lg:w-[40%] max-md:bg-primary p-[64px_24px]">
+        <div className="flex flex-col lg:justify-center lg:w-[40%] max-md:bg-primary px-[16px] lg:p-[64px_24px]">
           <motion.h2
             initial={initialVariant}
             whileInView={viewVariant}
             transition={transitionVariant}
             viewport={viewPortVariant}
-            className="font-boskaMedium text-secondary text-[60px] lg:text-[96px] z-20 leading-none"
+            className="font-boskaMedium text-secondary text-[48px] lg:text-[96px] z-20 leading-none"
           >
             Recreation &<br />
             Arcade Room
@@ -71,7 +70,7 @@ const WorldClass = () => {
             whileInView={viewVariant}
             transition={transitionVariant}
             viewport={viewPortVariant}
-            className={`mt-[48px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
+            className={`mt-[16px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[400]`}
           >
             Unwind and indulge your competitive <br />
             spirit in the resident&apos;s Game Room

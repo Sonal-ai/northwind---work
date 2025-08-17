@@ -32,7 +32,7 @@ const NavBar = ({
           duration: 0.2,
           type: "tween",
         }}
-        className={`bg-primary z-[999] w-full px-[17px] py-[8px] fixed top-0 left-0 flex items-center justify-between backdrop-blur-md shadow-md ${className}`}
+        className={`bg-primary w-full px-[17px] z-[99999] max-sm:h-[46px] fixed top-0 left-0 flex items-center justify-between backdrop-blur-md shadow-md ${className}`}
       >
         <div
           onClick={() => {
@@ -52,9 +52,7 @@ const NavBar = ({
         />
       </motion.header>
 
-      <main className="pt-[80px] h-max">
         <Navigation show={showNavigation} setShow={setShowNavigation} />
-      </main>
     </>
   );
 };

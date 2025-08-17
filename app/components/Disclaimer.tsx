@@ -4,7 +4,7 @@ import React from "react";
 const Disclaimer = () => {
   return (
     <div className="bg-secondary max-md:w-[100%] p-[70px_18px] md:p-[30px_20px] lg:p-[30px_60px] 2xl:p-[30px_290px] flex flex-col">
-      <h1 className="font-boskaMedium text-primary text-[64px] lg:text-[96px] z-20 leading-none mt-[32px]">
+      <h1 className="font-boskaMedium text-primary text-[48px] lg:text-[96px] z-20 leading-none mt-[32px]">
         disclaimer
       </h1>
 

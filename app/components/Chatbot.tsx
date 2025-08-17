@@ -206,7 +206,7 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
 
   return (
     <div
-      className={`flex flex-col gap-3 fixed max-sm:right-14 right-24 bottom-10 z-[1000000] ${
+      className={`flex flex-col max-sm:w-full gap-3 fixed max-sm:right-14 right-24 bottom-10 z-[1000000] ${
         isPreLoaderVisible && "hidden"
       }`}
     >
@@ -229,7 +229,7 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
               duration: 0.5,
               type: "spring",
             }}
-            className="rounded-[15px] border border-secondary w-[360px] max-custom400:w-[100%] h-[444px] flex flex-col overflow-hidden bg-primary pb-[10px]"
+            className="rounded-[15px] max-sm:absolute bottom-20 -right-14 custom400:-right-5 border border-secondary w-[360px] max-custom400:w-[100%] h-[444px] flex flex-col overflow-hidden bg-primary pb-[10px]"
           >
             {/* Header */}
             <div className="bg-secondary flex justify-between items-center px-4 py-3">

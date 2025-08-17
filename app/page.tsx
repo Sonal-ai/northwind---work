@@ -58,7 +58,7 @@ export default function Home() {
       className={`w-screen ${fullHeight ? "h-screen" : ""} overflow-x-hidden relative`}
     >
       <PreLoader
-        initial={purpose === "main" || purpose === ""}
+        initial={purpose === "main"}
         callback={() => {
           setIsPreLoaderVisible(false);
           setFullHeight(true);

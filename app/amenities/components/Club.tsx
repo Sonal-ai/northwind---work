@@ -7,21 +7,20 @@ const Club = () => {
   const { initialVariant, viewPortVariant, viewVariant, transitionVariant } =
     useMotionVariants();
   return (
-    <div className="w-full bg-primary text-center lg:justify-center relative flex flex-col">
+    <div className="w-full bg-primary text-center lg:justify-center relative flex flex-col mt-[32px] py-[12px]">
       <motion.h1
         initial={initialVariant}
         whileInView={viewVariant}
         transition={transitionVariant}
         viewport={viewPortVariant}
-        className="font-boskaMedium text-secondary text-[60px] lg:text-[96px] z-20 leading-none mb-[40px]"
+        className="font-boskaMedium text-secondary text-[48px] lg:text-[96px] z-20 leading-none"
       >
-        <br />
         The Club At Sanctuary
       </motion.h1>
 
-      <div className="w-full md:h-[80vh] ${manropeFont.className} p-[0px_0px] lg:p-[0px_40px] 2xl:p-[0px_240px] relative lg:gap-10 flex flex-col-reverse lg:flex-row justify-center bg-primary mb-[10px]">
+      <div className="w-full mt-[24px] md:h-[80vh] ${manropeFont.className} p-[0px_0px] lg:p-[0px_40px] 2xl:p-[0px_240px] relative lg:gap-10 flex flex-col-reverse lg:flex-row justify-center bg-primary">
         <motion.div
-          className="bg-[url('/assets/club1.jpg')] ${manropeFont.className} w-full lg:w-2/3 md:h-[100%] min-h-[400px] bg-cover bg-no-repeat bg-center lg:bg-right bg-primary"
+          className="bg-[url('/assets/club1.jpg')] max-lg:mt-[12px] ${manropeFont.className} w-full lg:w-2/3 md:h-[100%] min-h-[306px] bg-cover bg-no-repeat bg-center lg:bg-right bg-primary"
           initial={initialVariant}
           whileInView={viewVariant}
           viewport={viewPortVariant}

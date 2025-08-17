@@ -88,7 +88,7 @@ const ConstructionUpdates = () => {
           whileInView={viewVariant}
           transition={transitionVariant}
           viewport={viewPortVariant}
-          className={`${manropeFont.className} text-[24px] lg:text-[32px] text-primary mt-[12px]`}
+          className={`${manropeFont.className} text-[20px] lg:text-[32px] text-primary mt-[12px]`}
         >
           Stay updated on our progress
         </motion.p>
@@ -101,14 +101,14 @@ const ConstructionUpdates = () => {
       >
         <ConstructionArrow
           onClick={handlePrev}
-          className="text-primary  cursor-pointer absolute left-0 top-1/2 z-[9999]"
+          className="text-primary cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 z-[9999]"
         />
         <div className="w-full overflow-x-hidden flex justify-center rounded-[15px]">
           <div
             style={{
               transform: `translateX(-${caraouselIndex * 100}%)`,
             }}
-            className="flex gap-[8px] w-full max-lg:h-[400px] lg:h-[800px] rounded-[15px] transition-transform relative duration-200"
+            className="flex gap-[8px] w-full max-lg:h-[300px] lg:h-[800px] rounded-[15px] transition-transform relative duration-200"
           >
             <motion.div className="relative size-full rounded-[15px] shrink-0">
               <Image
@@ -157,7 +157,7 @@ const ConstructionUpdates = () => {
         </div>
         <ConstructionArrow
           onClick={handleNext}
-          className="rotate-180 text-primary cursor-pointer absolute right-0 top-1/2 z-[9999]"
+          className="rotate-180 text-primary cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 z-[9999]"
         />
       </motion.div>
 
