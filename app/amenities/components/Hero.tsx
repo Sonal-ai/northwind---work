@@ -45,13 +45,14 @@ const Hero = () => {
         <PrimaryButton
           text="Download Brochure"
           onTap={() => {
+             localStorage.setItem("download-brochure", "yes");
             if (status) {
               const link = document.createElement("a");
               link.href = "/assets/certificates/Brochure.pdf";
               link.download = "Brochure.pdf";
               link.click();
 
-              localStorage.setItem("download-brochure", "yes");
+             
             } else {
               document
                 .getElementById("connect-with-us")
@@ -64,7 +65,7 @@ const Hero = () => {
           text="Schedule Visit"
           onTap={() => {
             localStorage.setItem("purpose", "form");
-            router.push("/");
+            router.push("/sanctuary");
           }}
           className={`p-[20px_40px] max-lg:w-full lg:p-[20px_40px] text-[20px] hover:bg-amber-200/20 duration-200  lg:text-[24px]  ${manropeFont.className} 
                         bg-primary text-secondary

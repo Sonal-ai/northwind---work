@@ -45,7 +45,7 @@ const NavBar = ({
         <PrimaryButton
           onTap={() => {
             localStorage.setItem("purpose", "form");
-            router.push("/");
+            router.push("/sanctuary");
           }}
           text="Enquire Now"
           className="p-[12px_36px] max-sm:hidden text-secondary"

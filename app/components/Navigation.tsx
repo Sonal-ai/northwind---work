@@ -97,7 +97,7 @@ const Navigation = ({
             </div>
 
             <div  onClick={()=>{
-              window.open("https://northwindestates.com/")
+              window.open("/")
             }}  className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer">
               about developer
             </div>

@@ -30,7 +30,7 @@ const BanyanTower = () => {
         text="Express Interest"
         onTap={() => {
           localStorage.setItem("purpose", "form");
-          router.replace("/");
+          router.replace("/sanctuary");
         }}
         className="bg-[#161203] w-full px-[41px] py-[21px] border-none text-[20px] lg:text-[24px] max-lg:self-center mt-[28px] lg:mt-[56px]"
       />
