@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Northwind Sanctuary Development" }],
   category: "Real Estate",
   alternates: {
-    canonical: "https://www.northwindsanctuary.com",
+    canonical: "https://www.northwindestates.com/sanctuary",
   },
   robots: {
     index: true,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Northwind Sanctuary",
-    url: "https://www.northwindsanctuary.com",
+    url: "https://www.northwindestates.com/sanctuary",
     images: [
       {
         url: "/social-preview.jpg",
