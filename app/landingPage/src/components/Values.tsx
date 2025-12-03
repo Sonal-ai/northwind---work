@@ -1,5 +1,5 @@
 import { Maximize, Globe, Search, Lightbulb, Eye, Banknote } from "lucide-react";
-import { Card, CardContent } from "@/app/LandingPage.tsx/components/ui/card";
+import { Card, CardContent } from "@/app/landingPage/src/components/ui/card";
 import { motion } from "framer-motion";
 
 const values = [

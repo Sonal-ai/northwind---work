@@ -11,7 +11,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/app/LandingPage.tsx/components/ui/dialog"
+} from "@/app/landingPage/src/components/ui/dialog"
 
 function Command({
   className,

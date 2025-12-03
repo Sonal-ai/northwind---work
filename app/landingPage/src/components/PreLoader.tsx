@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import windLogo from "@/assets/wind-logo.png";
+import Image from "next/image";
 
+
+const MotionImage = motion(Image); 
 const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -39,7 +42,7 @@ const Preloader = () => {
               }}
               className="relative"
             >
-              <motion.img
+              <MotionImage
                 src={windLogo}
                 alt="North Wind Estates"
                 className="w-32 h-32 md:w-40 md:h-40"

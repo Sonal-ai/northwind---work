@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
 import windLogo from "@/assets/wind-logo.png";
+import Image from "next/image";
+
+
+const MotionImage = motion(Image); ////very important to avoid name conflict
+
 
 const About = () => {
   return (
@@ -61,7 +66,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex justify-center"
           >
-            <motion.img
+            <MotionImage
               whileHover={{ scale: 1.05, rotate: 5 }}
               transition={{ duration: 0.3 }}
               src={windLogo}

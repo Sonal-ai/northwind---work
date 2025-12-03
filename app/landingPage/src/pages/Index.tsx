@@ -1,3 +1,5 @@
+// pages/index.tsx
+
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
@@ -7,12 +9,12 @@ import MissionVision from "../components/MissionVision";
 import BrandStory from "../components/BrandStory";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import Preloader from "../components/Preloader";
+import PreLoader from "../components/PreLoader";
 
 const Index = () => {
   return (
     <>
-      <Preloader />
+      <PreLoader />
       <div className="min-h-screen">
         <Header />
         <main>

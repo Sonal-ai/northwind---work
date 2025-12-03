@@ -1,4 +1,4 @@
-import { Button } from "../components/ui/button";
+import { Button } from "./ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import luxuryImage from "@/assets/luxury-interior.jpg";
