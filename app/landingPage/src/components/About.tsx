@@ -72,7 +72,7 @@ const About = () => {
           autoPlay
           loop
           playsInline
-          src={"/assets/videos/verticalLoader.mp4"}
+          src={"/assets/videos/aboutUs.mp4"}
         />
           </motion.div>
         </div>

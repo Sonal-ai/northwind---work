@@ -11,7 +11,7 @@ import About from "./src/components/About";
 import Feature from "./src/components/Feature";
 import Values from "./src/components/Values";
 import MissionVision from "./src/components/MissionVision";
-import BrandStory from "./src/components/BrandStory";
+
 import Contact from "./src/components/Contact";
 import Footer from "./src/components/Footer";
 
@@ -43,7 +43,7 @@ export default function HomePage() {
             <Feature />
             <Values />
             <MissionVision />
-            <BrandStory />
+            
             <Contact />
           </main>
 

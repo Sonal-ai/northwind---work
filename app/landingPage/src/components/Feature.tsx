@@ -49,7 +49,7 @@ const Feature = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  text-white font-bold mb-4 sm:mb-6"
             >
               A Serene
               <br />

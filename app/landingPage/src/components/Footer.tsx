@@ -62,19 +62,24 @@ const Footer = () => {
         </div>
 
         {/* Large Logo Section */}
-        <div className="mb-12 flex justify-center">
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-4">
-              <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-wider">NORTH</span>
-              <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24">
+        <div className="mb-12 flex justify-center w-full">
+        
+            
+              <div className="relative w-100 h-32 sm:w-100 sm:h-40 md:w-120 md:h-48 mx-auto">
+              
+                  <Image
+                    src="/assets/footerLogo.png"   // <-- replace with your real image name
+                    alt="North Wind Estates Logo"
+                    fill
+                    className="object-cover "
+                    priority
+                  />
+               
                 
               </div>
-              <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-wider">WIND</span>
-            </div>
-            <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light tracking-[0.3em] sm:tracking-[0.4em] md:tracking-[0.5em] text-white/90">
-              ESTATES
-            </div>
-          </div>
+              {/*relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto*/}
+            
+          
         </div>
 
         {/* Bottom Section - Legal Links and Copyright */}

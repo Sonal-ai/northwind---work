@@ -22,7 +22,7 @@ const values = [
     icon: Lightbulb,
     title: "INNOVATION",
     description: "We are pioneering new solutions and shaping the landscape of real estate.",
-    highlight: true,
+    
   },
   {
     icon: Eye,

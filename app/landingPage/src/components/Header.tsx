@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Image from "next/image";
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,12 +45,18 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <nav className="flex items-center justify-between">
             <Link href="/landingPage" className="flex items-center gap-2">
-              <div className="text-foreground font-medium tracking-wide">
-                <span className="text-lg sm:text-xl md:text-2xl font-semibold">NORTH WIND</span>
-                <div className="text-[0.5rem] sm:text-xs text-muted-foreground tracking-[0.3em] mt-0.5">
-                  ESTATES
-                </div>
-              </div>
+              <div className="relative w-30 h-16 sm:w-100 sm:h-40 md:w-40 md:h-10 mx-auto">
+                            
+                                <Image
+                                  src="/assets/headerLogo.svg"   // <-- replace with your real image name
+                                  alt="North Wind Estates Logo"
+                                  fill
+                                  className="object-cover "
+                                  priority
+                                />
+                             
+                              
+                            </div>
             </Link>
 
             {/* Desktop Navigation */}
