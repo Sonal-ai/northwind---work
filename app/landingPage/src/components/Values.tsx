@@ -22,7 +22,7 @@ const values = [
     icon: Lightbulb,
     title: "INNOVATION",
     description: "We are pioneering new solutions and shaping the landscape of real estate.",
-    
+
   },
   {
     icon: Eye,
@@ -59,25 +59,23 @@ const Values = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ 
-                  duration: 0.5, 
+                transition={{
+                  duration: 0.5,
                   delay: index * 0.1,
-                  ease: "easeOut" 
+                  ease: "easeOut"
                 }}
-                whileHover={{ 
+                whileHover={{
                   y: -8,
                   transition: { duration: 0.3 }
                 }}
               >
                 <Card
-                  className={`border-none shadow-md transition-all duration-300 hover:shadow-2xl h-full group ${
-                    value.highlight ? "bg-mint-light" : "bg-card"
-                  }`}
+                  className="border-none shadow-md transition-all duration-300 hover:shadow-2xl h-full group bg-card"
                 >
                   <CardContent className="p-6 sm:p-8">
                     <motion.div
-                      className={`mb-4 sm:mb-6 ${value.highlight ? "text-mint" : "text-primary"}`}
-                      whileHover={{ 
+                      className="mb-4 sm:mb-6 text-primary"
+                      whileHover={{
                         scale: 1.1,
                         rotate: 5,
                         transition: { duration: 0.3 }
@@ -85,7 +83,7 @@ const Values = () => {
                     >
                       <Icon size={40} strokeWidth={1.5} className="sm:w-12 sm:h-12" />
                     </motion.div>
-                    <h3 className={`text-lg sm:text-xl font-bold mb-3 sm:mb-4 transition-colors duration-300 ${value.highlight ? "text-mint group-hover:text-mint/80" : "text-foreground group-hover:text-primary"}`}>
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 transition-colors duration-300 text-foreground group-hover:text-primary">
                       {value.title}
                     </h3>
                     <p className="text-sm sm:text-base text-muted-foreground leading-relaxed transition-colors duration-300 group-hover:text-foreground">
