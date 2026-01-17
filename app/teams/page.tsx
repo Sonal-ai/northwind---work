@@ -1,8 +1,8 @@
-    "use client";
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+
 
 import Header from "../landingPage/src/components/Header";
 import Footer from "../landingPage/src/components/Footer";
@@ -167,7 +167,7 @@ const TeamsPage: React.FC = () => {
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Join Our Team</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We're always looking for talented individuals who share our passion for
+              We&apos;re always looking for talented individuals who share our passion for
               excellence and innovation.
             </p>
 

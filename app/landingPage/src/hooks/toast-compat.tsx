@@ -41,7 +41,7 @@ export function toast(opts: ToastOptions) {
       id = sonner.error(content, { duration });
       break;
     case 'loading':
-      id = sonner.promise(new Promise(() => {}), {
+      id = sonner.promise(new Promise(() => { }), {
         loading: content,
         success: content,
         error: content
@@ -58,12 +58,11 @@ export function toast(opts: ToastOptions) {
       // calling `sonner.dismiss()` will close all toasts.
       // If you'd like to only dismiss by id, Sonner's API may vary by version.
       try {
-        // @ts-ignore
+        // @ts-expect-error
         sonner.dismiss(id);
       } catch {
         // fallback: dismiss all
-        // @ts-ignore
-        sonner.dismiss();
+        // sonner.dismiss();
       }
     },
     // update not implemented — Sonner supports programmatic replacement via custom IDs,
@@ -71,7 +70,7 @@ export function toast(opts: ToastOptions) {
     update: (newOpts: Partial<ToastOptions>) => {
       // Simple strategy: dismiss and re-show
       try {
-        // @ts-ignore
+        // @ts-expect-error
         sonner.dismiss(id);
       } catch {
         // ignore

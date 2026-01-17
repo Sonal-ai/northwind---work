@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 
-const MotionImage = motion(Image); ////very important to avoid name conflict
-
 
 const About = () => {
   return (
@@ -34,7 +32,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl sm:text-2xl text-primary font-medium mb-6 sm:mb-8"
             >
-              "Breeze of Change"
+              &quot;Breeze of Change&quot;
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -66,14 +64,14 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex justify-center h-100vh"
           >
-          <video
-          className="object-cover h-[500px] rounded-lg shadow-elevated"
-          muted
-          autoPlay
-          loop
-          playsInline
-          src={"/assets/videos/aboutUs.mp4"}
-        />
+            <video
+              className="object-cover h-[500px] rounded-lg shadow-elevated"
+              muted
+              autoPlay
+              loop
+              playsInline
+              src={"/assets/videos/aboutUs.mp4"}
+            />
           </motion.div>
         </div>
       </div>

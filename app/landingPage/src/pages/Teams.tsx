@@ -59,7 +59,7 @@ const Teams = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-b from-sky-light to-background">
         <div className="container mx-auto px-4 sm:px-6">
@@ -104,7 +104,7 @@ const Teams = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </motion.div>
-                  
+
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-foreground mb-1">
                       {member.name}
@@ -115,7 +115,7 @@ const Teams = () => {
                     <p className="text-sm text-muted-foreground mb-4">
                       {member.bio}
                     </p>
-                    
+
                     <div className="flex gap-3">
                       <a
                         href={member.linkedin}
@@ -154,7 +154,7 @@ const Teams = () => {
               Join Our Team
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We're always looking for talented individuals who share our passion for excellence and innovation.
+              We&apos;re always looking for talented individuals who share our passion for excellence and innovation.
             </p>
             <a
               href="mailto:careers@northwindestates.com"

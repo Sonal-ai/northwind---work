@@ -3,7 +3,7 @@ import { Facebook, Instagram, Linkedin, MapPin } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import windLogo from "../assets/wind-logo.png";
+
 
 
 const Footer = () => {
@@ -63,23 +63,23 @@ const Footer = () => {
 
         {/* Large Logo Section */}
         <div className="mb-12 flex justify-center w-full">
-        
-            
-              <div className="relative w-100 h-32 sm:w-100 sm:h-40 md:w-120 md:h-48 mx-auto">
-              
-                  <Image
-                    src="/assets/footerLogo.png"   // <-- replace with your real image name
-                    alt="North Wind Estates Logo"
-                    fill
-                    className="object-cover "
-                    priority
-                  />
-               
-                
-              </div>
-              {/*relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto*/}
-            
-          
+
+
+          <div className="relative w-100 h-32 sm:w-100 sm:h-40 md:w-120 md:h-48 mx-auto">
+
+            <Image
+              src="/assets/footerLogo.png"   // <-- replace with your real image name
+              alt="North Wind Estates Logo"
+              fill
+              className="object-cover "
+              priority
+            />
+
+
+          </div>
+          {/*relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto*/}
+
+
         </div>
 
         {/* Bottom Section - Legal Links and Copyright */}

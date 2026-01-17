@@ -64,7 +64,7 @@ const Contact = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-muted-foreground text-base sm:text-lg"
             >
-              Fill this form and we'll reach out to you
+              Fill this form and we&apos;ll reach out to you
             </motion.p>
           </motion.div>
 
@@ -135,7 +135,7 @@ const Contact = () => {
                 className="bg-muted/50"
               />
               <p className="text-xs sm:text-sm text-muted-foreground mt-2">
-                Anything else you'd like to add...
+                Anything else you&apos;d like to add...
               </p>
             </div>
 

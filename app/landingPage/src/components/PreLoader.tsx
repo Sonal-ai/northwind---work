@@ -34,7 +34,7 @@ export default function PreLoader({
     const startTimerAfterStart = () => {
       if (startedRef.current) return;
       startedRef.current = true;
-      startedAt = Date.now();
+      // startedAt = Date.now(); // Removed unused variable
 
       // Ensure we wait exactly durationSeconds from start
       const ms = Math.max(0, durationSeconds * 1000);
@@ -76,7 +76,7 @@ export default function PreLoader({
         try {
           await video.play();
           // play succeeded -> will trigger onPlay
-        } catch (err) {
+        } catch {
           // autoplay failed; still start the timer visually so preloader doesn't hang
           startTimerAfterStart();
         }
@@ -147,7 +147,7 @@ export default function PreLoader({
           {/* optional overlay content (logo/text) */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             {/* If you want to show logo over video, enable below */}
-            
+
           </div>
         </motion.div>
       )}
