@@ -89,7 +89,6 @@ export function useToast() {
     dismiss: (/*toastId?: string*/) => {
       // sonner.dismiss() without arg dismisses all toasts
       // sonner may accept an id; if present in your version you can accept toastId and pass it
-      // @ts-ignore -- Sonner types might differ across versions
       sonner.dismiss();
     },
   };
