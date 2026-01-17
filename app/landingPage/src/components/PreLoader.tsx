@@ -29,7 +29,7 @@ export default function PreLoader({
 
   useEffect(() => {
     const video = videoRef.current;
-    let startedAt = 0;
+    // let startedAt = 0; // Removed unused variable
 
     const startTimerAfterStart = () => {
       if (startedRef.current) return;

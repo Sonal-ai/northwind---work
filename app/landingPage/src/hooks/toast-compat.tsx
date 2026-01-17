@@ -58,7 +58,7 @@ export function toast(opts: ToastOptions) {
       // calling `sonner.dismiss()` will close all toasts.
       // If you'd like to only dismiss by id, Sonner's API may vary by version.
       try {
-        // @ts-expect-error
+        // @ts-expect-error -- Sonner types might differ across versions
         sonner.dismiss(id);
       } catch {
         // fallback: dismiss all
@@ -70,10 +70,9 @@ export function toast(opts: ToastOptions) {
     update: (newOpts: Partial<ToastOptions>) => {
       // Simple strategy: dismiss and re-show
       try {
-        // @ts-expect-error
+        // @ts-expect-error -- Sonner types might differ across versions, or `id` might not be a valid Sonner ID type
         sonner.dismiss(id);
       } catch {
-        // ignore
       }
       return toast({ ...opts, ...newOpts });
     },
@@ -90,7 +89,7 @@ export function useToast() {
     dismiss: (/*toastId?: string*/) => {
       // sonner.dismiss() without arg dismisses all toasts
       // sonner may accept an id; if present in your version you can accept toastId and pass it
-      // @ts-ignore
+      // @ts-ignore -- Sonner types might differ across versions
       sonner.dismiss();
     },
   };
